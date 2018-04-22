@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayom</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/ayomlogo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body>
+    <div class="container">
+<!-- Header -->
+        <header class="parent"></header>
+<!-- END Header -->
+<!-- Main -->
+        <main class="parent">
+            <div class="blog-article article-blog article-title" id="head-about">
+                <p class="gillsans-22 tab-article">MITRA</p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="article-content gillsans-content">
+                <p class="description"></p>
+            </div>
+            <div class="article-content gillsans-content" style="text-align: center; margin: 35px 0">
+                <img id="partner" src="" style="width: 80%;">
+            </div>
+            <hr/>
+            <div class="blog-article article-blog article-title" id="head-about">
+                <p class="gillsans-22 tab-article">MITRA MEDIA</p>
+            </div>
+            <div class="article-content gillsans-content" style="text-align: center">
+                <img id="partner_media" src="" style="width: 80%;">
+            </div>
+
+        </main>
+<!-- END Main -->
+<!-- Footer -->
+        <footer class="parent" style="margin-bottom:30px;"></footer>
+<!-- END Footer -->
+    </div>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../assets/js/public.js"></script>
+    <script src="../assets/js/partial.js"></script>
+    <script>
+      $(function(){
+        partner();
+      });
+
+      function partner(){
+        var partner_inner      = "";
+
+        var dumb = p_getData('operation', 'partnerFetch');
+        var partner = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+       $("p.description").html(partner.description);
+       if(partner.partner != "" && partner.partner != null) $("#partner").attr('src', '../assets/partner/' + partner.partner); else $("#partner").remove();
+       if(partner.partner_media != "" && partner.partner_media != null) $("#partner_media").attr('src', '../assets/partner/' + partner.partner_media); else $("#partner_media").remove();
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Standard Meta -->
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="../assets/img/ayomlogo.png">
+		<!-- Site Properities -->
+		<title>Ayom</title>
+
+		<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../assets/css/syncard-inject.css" rel="stylesheet">
+		<link href="../assets/css/admin.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<header class="parent-admin"></header>
+
+			<main class="parent-admin"></main>
+
+			<footer class="parent-admin"></footer>
+		</div>
+
+		<!-- Script collection -->
+		<script type="text/javascript" src="../assets/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui-1.10.0.custom.min.js"></script>
+		<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../assets/js/syncard.js"></script>
+		<script type="text/javascript" src="../assets/js/public.js"></script>
+
+		<!-- page script -->
+		<script type="text/javascript">
+			$(function(){
+				loadData();
+			});
+			function loadData(){
+				var html = '';
+
+				html = html +
+				'<div class="row">'+
+					'<form id="syncrom" f-group="operation" f-target="report_profit_and_loss" enctype="multipart/form-data">'+
+						'<div class="input-frame col-md-6">'+
+							'<h3><b>PROFIT & LOSS</b></h3>'+
+							'<div class="form-group">'+
+								'<label>Title 1</label>'+
+								'<input name="title_1" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<h3>&nbsp;</h3>'+
+							'<div class="form-group">'+
+								'<label>Picture 1</label>'+
+								'<input name="picture_1" type="file" class="form-control">'+
+								'<input name="filename_1" name-tag="picture_1" type="text" class="form-control" value="No file" disabled>'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Title 2</label>'+
+								'<input name="title_2" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Picture 2</label>'+
+								'<input name="picture_2" type="file" class="form-control">'+
+								'<input name="filename_2" name-tag="picture_2" type="text" class="form-control" value="No file" disabled>'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Title 3</label>'+
+								'<input name="title_3" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Picture 3</label>'+
+								'<input name="picture_3" type="file" class="form-control">'+
+								'<input name="filename_3" name-tag="picture_3" type="text" class="form-control" value="No file" disabled>'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Title 4</label>'+
+								'<input name="title_4" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Picture 4</label>'+
+								'<input name="picture_4" type="file" class="form-control">'+
+								'<input name="filename_4" name-tag="picture_4" type="text" class="form-control" value="No file" disabled>'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Title 5</label>'+
+								'<input name="title_5" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Picture 5</label>'+
+								'<input name="picture_5" type="file" class="form-control">'+
+								'<input name="filename_5" name-tag="picture_5" type="text" class="form-control" value="No file" disabled>'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<hr/>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Title 6</label>'+
+								'<input name="title_6" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Caption 1</label>'+
+								'<input name="caption_1" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Value 1</label>'+
+								'<input name="value_1" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Caption 2</label>'+
+								'<input name="caption_2" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Value 2</label>'+
+								'<input name="value_2" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Caption 3</label>'+
+								'<input name="caption_3" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Value 3</label>'+
+								'<input name="value_3" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<hr/>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Title 7</label>'+
+								'<input name="title_7" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Caption 4</label>'+
+								'<input name="caption_4" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Value 4</label>'+
+								'<input name="value_4" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Caption 5</label>'+
+								'<input name="caption_5" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Value 5</label>'+
+								'<input name="value_5" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Caption 6</label>'+
+								'<input name="caption_6" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="form-group">'+
+								'<label>Value 6</label>'+
+								'<input name="value_6" class="form-control" />'+
+							'</div>'+
+						'</div>' +
+						'<div class="clearfix"></div>'+
+						'<hr/>' +
+						'<div class="input-frame col-md-6">'+
+							'<div class="btn-group">'+
+								'<button class="btn btn-warning" type="submit">Create</button>'+
+								'<a href="report_financial.html" class="btn btn-warning" type="reset">Cancel</a>'+
+							'</div>'+
+						'</div>'+
+					'</form>' +
+				'</div>';
+
+				$('main.parent-admin .main-content').append(html);
+
+				/* data generator */
+				dataGenerator();
+			}
+
+			function dataGenerator(){
+				var xData = p_getData('operation', 'report_profit_and_lossFetch');
+					  xData = xData.feedData;
+
+				var breakTag = '<br ' + '/>'; // Adjust comment to avoid issue on phpjs.org display
+
+				for (var key in xData) {
+					if($("[name='" + key + "']").attr('type') != "file") $("[name=" + key + "]").val(xData[key].replace(/\&nbsp;/g, ' ').replace(/<br\s*\/?>/mg,""));
+					else $("[name-tag='" + key +"']").val(xData[key]);
+				}
+
+				p_formHandler('syncrom', 'updateData', '');
+			}
+		</script>
+	</body>
+</html>

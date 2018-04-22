@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayom</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/ayomlogo.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+</head>
+<body>
+    <div class="container">
+<!-- Header -->
+        <header class="parent"></header>
+<!-- END Header -->
+<!-- Main -->
+        <main class="parent">
+            <div class="blog-article article-blog article-title">
+                <p class="gillsans-22 tab-article" id="title-head"></p>
+            </div>
+            <div class="clearfix"></div>
+    <!-- Main Tab-->
+            <div class="tab gillsans-15 article-title-blog" id="donate-navigator"></div>
+            <hr class="tab-hr">
+    <!-- Main Content-->
+            <section id="donate-container"></section>
+
+            <div class="clearfix"></div>
+        </main>
+<!-- END Main -->
+<!-- Footer -->
+        <footer class="parent" style="margin-bottom:30px;"></footer>
+<!-- END Footer -->
+    </div>
+    <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script>
+        function openCity(cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+          }
+          document.getElementById(cityName).style.display = "block";
+        }
+    </script>
+    <script src="../../assets/js/public.js"></script>
+    <script src="../../assets/js/partial.js"></script>
+    <script>
+      $(function(){
+        donate_();
+      });
+
+      function donate_(){
+        var system = p_getData('support', 'systemFetch');
+      			system = system.feedData;
+
+        var dumb         = p_getData('operation', 'home_donateFetch', '', 'id_data="3"');
+        var donate_group = (dumb.feedData != undefined) ? dumb.feedData : "";
+        var donate_inner = "";
+
+        var dumb             = p_getData('operation', 'product_categoryOption', '', 'type_id="2"');
+        var donate_type      = (dumb.feedData != undefined) ? dumb.feedData : "";
+        var donate_navigator = "";
+        var donate_container = "";
+
+        var donate_list = [];
+
+        for(var loop=0; loop<donate_type.length; loop++){
+          donate_navigator = donate_navigator + '<button class="tab-blog" onclick="openCity(\'donate-' + loop +'\')">' + donate_type[loop].caption + '</button>';
+
+          state = (loop > 0) ? 'display-none' : "";
+          donate_container = donate_container +
+          '<div id="donate-' + loop + '" class="tabcontent1 city ' + state + '">' +
+              '<p class="gillsans-content text-color-content description-head" style="margin-bottom:50px;"></p>' +
+              '<div class="col-md-7 col-sm-7"><img index="1" src="../../assets/system/' + system.food_viewer + '" class="img-fit-cover img-shop tab-donate item-viewer"></div>' +
+              '<div class="col-md-5 col-sm-5" id="form-' + loop + '">' +
+                  '<p class="gillsans-15 tab-article">PLEASE SELECT :</p>' +
+                  '<div class="input-group input-width">' +
+                      '<select name="type" class="form-control input-default-form gillsans dummy-select" type="donate-' + loop + '" >' +
+                        '<option value="">Pilih Jenis</option>' +
+                      '</select>' +
+                  '</div>' +
+                  '<div class="input-group input-width">' +
+                      '<input type="text" name="size" class="form-control input-default-form gillsans" placeholder="Ukuran" disabled>' +
+                  '</div>' +
+                  '<div class="input-group input-width">' +
+                      '<textarea type="text" name="detail" class="form-control input-default-form gillsans" placeholder="Detail item : QTY needed, SKU, where to buy" rows="4" cols="37" style="resize:none;" disabled></textarea>' +
+                  '</div>' +
+                  '<div class="input-group input-width">' +
+                      '<input type="text" name="shipment" class="form-control input-default-form gillsans" placeholder="Jenis Pengiriman" disabled>' +
+                  '</div>' +
+                  '<button type="button" cart-form="donate-' + loop + '" class="button-circle-form btn-equipment-addcart gillsans">SIMPAN KE KERANJANG</button>' +
+              '</div>' +
+          '</div>';
+
+          dumb             = p_getData('operation', 'product_foods_all', '', 'category_id = "' + donate_type[loop].value + '"');
+          donate_item_dumb = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+          if(donate_list['donate_' + loop] == undefined) donate_list['donate_' + loop] = "";
+
+          donate_list['donate_' + loop] = dataToOptionHtml(donate_item_dumb);
+        }
+
+        $("#donate-navigator").html(donate_navigator);
+        $("#donate-container").html(donate_container);
+        $("#title-head").html(donate_group.title.toUpperCase());
+        $(".description-head").html(donate_group.description);
+
+        donate_item(donate_list, donate_type.length);
+      }
+
+      function donate_item(donate_list, len){
+        $('[cart-form]').on('click', function(){
+          add_to_cart($(this).attr('cart-form'));
+        });
+
+        for(var loop=0; loop<len; loop++){
+          $('[type="donate-' + loop + '"]').append(donate_list['donate_' + loop]);
+          $('[type="donate-' + loop + '"]').on('change', function(){
+            type = $(this).attr('type');
+            id   = $(this).val();
+
+            dumb = p_getData('operation', 'product_foodsFetch', '', 'id_data = "' + id + '"');
+            item = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+            $('#' + type + ' input,' + '#form-' + loop + ' textarea').val('');
+
+            picture = "../../assets/img/dog2.gif";
+            if(item.picture != "" && item.picture != undefined) picture = "../../assets/product/foods/" + item.picture;
+
+            $('#' + type + ' .item-viewer').attr('src', picture);
+            $('#' + type + ' [name=size]').val(item.size);
+            $('#' + type + ' [name=detail]').val(item.detail);
+            $('#' + type + ' [name=shipment]').val(item.shipment);
+          });
+        }
+      }
+
+      function add_to_cart(target){
+        id   = $('#' + target + ' [name=type]').val();
+
+        if(id != ""){
+          dumb = r_getCookie('ayom_donate_cart');
+
+          if(dumb != "" && dumb != undefined){
+            dumb = JSON.parse(dumb);
+            dumb.push({ product_id: id, product_type: 'foods' });
+          }else{
+            dumb = [];
+            dumb.push({ product_id: id, product_type: 'foods' });
+          }
+
+          leng = dumb.length;
+          dumb = JSON.stringify(dumb);
+          r_setCookie('ayom_donate_cart', dumb);
+          r_setCookie("ayom_USER_CART_STATUS", "active");
+
+          $("#cart-bubble").addClass('active');
+          $("#cart-bubble").html(leng);
+      		$("#cart-text").attr('style', 'display:none');
+        }
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayom</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/ayomlogo.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+</head>
+<body>
+    <div class="container">
+<!-- Header -->
+        <header class="parent"></header>
+<!-- END Header -->
+<!-- Main -->
+        <main class="parent">
+            <div class="blog-article article-blog article-title">
+                <p class="gillsans-22 tab-article" id="title-head"></p>
+            </div>
+            <div class="article-content gillsans-content">
+                <p class="description-head"></p>
+            </div>
+            <div class="col-md-12 bca-account tab-bca-account">
+                <div class="col-sm-3 col-md-3 col-lg-3"></div>
+                <!-- <div class="col-sm-6 col-md-6 col-lg-6" style="background-color: #EEE"><img src="../../assets/img/bca-account.jpg" class="img-fit-cover"></div> -->
+                <div class="col-sm-6 col-md-6 col-lg-6" style="background-color: #EEE">
+                  <h3 style='font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; padding: 15px 0; text-align: center'><i id="acc-container"></i></h3>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3"></div>
+            </div>
+            <div class="clearfix"></div>
+    <!-- Main Tab-->
+            <div class="tab gillsans-15 article-title-blog" id="donate_navigator"></div>
+            <hr class="tab-hr">
+    <!-- Main Content-->
+            <section id="donate-container">
+
+              <div class="clearfix"></div>
+            </section>
+            <hr style="margin-top:50px;">
+            <p class="article-subtitle gillsans-19" style="margin-top:30px;margin-bottom:30px;">Summary</p>
+            <section id="cart-container">
+
+
+            </section>
+            <div class="clearfix"></div>
+            <hr style="margin-top:50px;">
+            <div class="col-lg-12 col-md-12 col-sm-12" id="form-donate">
+                <p class="gillsans-15 tab-article" style="text-align:center; font-size:20px; margin-top:30px; margin-bottom:50px;">Lengkapi formulir ini untuk melengkapi donasi Anda</p>
+                <div class="input-group input-width-cart">
+                    <input type="text" name="name" class="form-control input-default-form gillsans" placeholder="Nama">
+                </div>
+                <div class="input-group input-width-cart">
+                    <input type="text" name="email" class="form-control input-default-form gillsans" placeholder="Email">
+                </div>
+                <div class="input-group input-width-cart">
+                    <input type="text" name="phone" class="form-control input-default-form gillsans" placeholder="Nomor Mobile">
+                </div>
+                <div class="input-group input-width-cart">
+                        <input type="text" name="acc_bank" class="form-control input-default-form gillsans" placeholder="Nama Bank">
+                    </div>
+                    <div class="input-group input-width-cart">
+                        <input type="text" name="amount" class="form-control input-default-form gillsans" value="0" placeholder="Nominal (total)" disabled>
+                    </div>
+                    <div class="input-group input-width-cart">
+                        <input type="text" name="acc_number" class="form-control input-default-form gillsans" placeholder="Nomor Rekening">
+                    </div>
+                <div class="input-group input-width-cart">
+                    <textarea type="text" name="message" class="form-control input-default-form gillsans" placeholder="Pesan" rows="10" cols="37" style="resize:none;"></textarea>
+                </div>
+                <div class="input-group input-width-cart">
+                    <input type="checkbox" name="agreement_check" class=" gillsans" value="1">
+                    <span class="gillsans-12 check-left text-color-content">Saya sudah membaca <i><a href="#" id="money-policies" target="_blank"><b>Syarat dan Ketentuan</b></a></i> yang berlaku</span>
+                </div>
+                <button type="button" onclick="donate_now()" class="button-circle-cart btn-money gillsans" style="margin-bottom:20px;">KIRIM</button>
+            </div>
+            <div class="clearfix"></div>
+        </main>
+<!-- END Main -->
+<!-- Footer -->
+        <footer class="parent" style="margin-bottom:30px;"></footer>
+<!-- END Footer -->
+    </div>
+    <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script>
+        function openCity(cityName) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
+        }
+    </script>
+    <script src="../../assets/js/public.js"></script>
+    <script src="../../assets/js/partial.js"></script>
+    <script>
+      $(function(){
+        donate_();
+      });
+
+      function donate_(){
+        var dumb         = p_getData('operation', 'home_donateFetch', '', 'id_data="1"');
+        var donate_group = (dumb.feedData != undefined) ? dumb.feedData : "";
+        var donate_inner = "";
+
+        var dumb             = p_getData('operation', 'money_categoryOption');
+        var donate_type      = (dumb.feedData != undefined) ? dumb.feedData : "";
+        var donate_navigator = "";
+        var donate_container = "";
+
+        var donate_list = [];
+
+        for(var loop=0; loop<donate_type.length; loop++){
+          donate_navigator = donate_navigator + '<button class="tab-blog" onclick="openCity(\'donate-' + loop +'\')">' + donate_type[loop].caption.toUpperCase() + '</button>';
+
+          diff = parseInt(donate_type[loop].target) - parseInt(donate_type[loop].income);
+          diff = (diff > 0) ? diff : 0;
+
+          state = (loop > 0) ? 'display-none' : "";
+          donate_container = donate_container +
+          '<div id="donate-' + loop + '" class="tabcontent1 city ' + state + '">' +
+              '<div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">' +
+                  '<div class="btn-money backrounded">' +
+                      '<span class="gillsans">TARGET DONASI</span>' +
+                  '</div>' +
+              '</div>' +
+              '<div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18">Rp. ' + currencyFormatChanger_static(donate_type[loop].target) + '</div>' +
+              '<div class="clearfix"></div>' +
+              '<div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">' +
+                  '<div class="btn-money backrounded">' +
+                      '<span class="gillsans">PENDAPATAN DONASI</span>' +
+                  '</div>' +
+              '</div>' +
+              '<div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18">Rp. ' + currencyFormatChanger_static(donate_type[loop].income) + '</div>' +
+              '<div class="clearfix"></div>' +
+              '<div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">' +
+                  '<div class="btn-money backrounded">' +
+                      '<span class="gillsans">SELISIH</span>' +
+                  '</div>' +
+              '</div>' +
+              '<div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18">Rp. ' + currencyFormatChanger_static(String(diff)) + '</div>' +
+              '<div class="clearfix"></div>' +
+              '<p class="article-subtitle gillsans-19" style="margin-top:30px;">' + donate_type[loop].caption + '</p>' +
+              '<p class="gillsans-content text-color-content desc">' + donate_type[loop].description + '</p>' +
+              '<div class="clearfix"></div>' +
+              '<p class="article-subtitle gillsans-19" style="margin-top:30px;">Select your amount</p>' +
+              '<div class="col-md-12" style="text-align:center;">' +
+                  '<div class="col-md-12" style="width:70%; left:15%;">' +
+                      '<button type="button" target-index="' + loop + '" target-caption="' + donate_type[loop].caption + '" target-id="' + donate_type[loop].value + '" target-value="10000" class="button-amount btn-money gillsans">Rp. 10.000</button>' +
+                      '<button type="button" target-index="' + loop + '" target-caption="' + donate_type[loop].caption + '" target-id="' + donate_type[loop].value + '" target-value="25000" class="button-amount btn-money gillsans">Rp. 25.000</button>' +
+                      '<button type="button" target-index="' + loop + '" target-caption="' + donate_type[loop].caption + '" target-id="' + donate_type[loop].value + '" target-value="50000" class="button-amount btn-money gillsans">Rp. 50.000</button>' +
+                      '<button type="button" target-index="' + loop + '" target-caption="' + donate_type[loop].caption + '" target-id="' + donate_type[loop].value + '" target-value="100000" class="button-amount btn-money gillsans">Rp. 100.000</button>' +
+                      '<button type="button" target-index="' + loop + '" target-caption="' + donate_type[loop].caption + '" target-id="' + donate_type[loop].value + '" target-value="250000" class="button-amount btn-money gillsans">Rp. 250.000</button>' +
+                      '<button type="button" target-index="' + loop + '" target-caption="' + donate_type[loop].caption + '" target-id="' + donate_type[loop].value + '" target-value="500000" class="button-amount btn-money gillsans">Rp. 500.000</button>' +
+                      '<button type="button" target-index="' + loop + '" target-caption="' + donate_type[loop].caption + '" target-id="' + donate_type[loop].value + '" target-value="1000000" class="button-amount btn-money gillsans">Rp. 1.000.000</button>' +
+                      '<input target-index="' + loop + '" target-caption="' + donate_type[loop].caption + '" target-id="' + donate_type[loop].value + '" target-value="0" type="text" class="custom-amount button-amount btn-money gillsans" value="Other Amount" />' +
+                  '</div>' +
+              '</div>' +
+              '<div class="clearfix"></div>' +
+          '</div>';
+
+          dumb             = p_getData('operation', 'product_foods_all', '', 'category_id = "' + donate_type[loop].value + '"');
+          donate_item_dumb = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+          if(donate_list['donate_' + loop] == undefined) donate_list['donate_' + loop] = "";
+
+          donate_list['donate_' + loop] = dataToOptionHtml(donate_item_dumb);
+        }
+
+        $("#donate_navigator").html(donate_navigator);
+        $("#donate-container").html(donate_container);
+        $("#title-head").html(donate_group.title.toUpperCase());
+        $(".description-head").html(donate_group.description);
+
+        $('[target-value]').on('click', function(){
+          add_to_cart($(this));
+        });
+
+        $('.custom-amount').on('click', function(){
+          $(this).val("");
+          $(this).attr('target-value','0');
+        });
+
+        $('.custom-amount').on('blur', function(){
+          if($(this).val() == "" || parseInt($(this).val()) == "0") $(this).val("Other Amount");
+        });
+
+        $('.custom-amount').on('keyup', function(e){
+          if (e.keyCode == 13) {
+            if($(this).val() != "Other Amount"){
+              $(this).attr('target-value',$(this).val());
+              add_to_cart($(this));
+              $(this).val("Other Amount");
+              $(this).attr('target-value','0');
+              $(this).blur();
+            }
+          }
+        });
+        // donate_item(donate_list, donate_type.length);
+        var dumb      = p_getData('support', 'systemFetch');
+        var system   = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        $("#acc-container").html(system.acc_bank + " " + system.acc_number + " " + system.acc_owner);
+        $("#money-policies").attr('href', '../../assets/system/' + system.money_policies);
+
+        read_cart();
+      }
+
+      function add_to_cart(elem){
+        id      = $(elem).attr('target-id');
+        value   = $(elem).attr('target-value');
+        index   = $(elem).attr('target-index');
+        caption = $(elem).attr('target-caption');
+
+        if(id != ""){
+          dumb = r_getCookie('ayom_donate_money_cart');
+
+          if(dumb != "" && dumb != undefined){
+            dumb = JSON.parse(dumb);
+            if(dumb[index] != undefined){
+              value = parseInt(dumb[index].amount) + parseInt(value);
+            }else{
+            }
+          }else{
+            dumb = []
+          }
+
+          dumb[index] = { money_category_id: id, type_caption: caption, amount: value };
+
+          dumb = JSON.stringify(dumb);
+          r_setCookie('ayom_donate_money_cart', dumb);
+
+          read_cart();
+
+        }
+      }
+
+      function read_cart(){
+        dumb = r_getCookie('ayom_donate_money_cart');
+        dumb = (dumb != undefined && dumb != "") ? JSON.parse(dumb) : [];
+
+        var cart_item = "";
+        var cart_total= 0;
+        for(var loop=0; loop<dumb.length; loop++){
+          if(dumb[loop] != null && dumb[loop] != undefined){
+            cart_item = cart_item +
+            '<div class="col-md-12" style="padding-left:20%">' +
+                '<div class="col-md-3">' +
+                    '<p class="gillsans-content text-color-content">' + (loop + 1) + '. Jenis Donasi<span>: ' + dumb[loop].type_caption + '</span></p>' +
+                '</div>' +
+                '<div class="col-md-3" style="text-align:right;">' +
+                    '<p class="gillsans-content text-alert article-content-cart">Rp. ' + currencyFormatChanger_static(String(dumb[loop].amount)) + '</p>' +
+                '</div>' +
+                '<div class="col-md-3" style="text-align:right;">' +
+                    '<a href="#" delete-index="' + loop + '"><p class="gillsans-content text-color-content article-content-cart"><i>Hapus</i></p></a>' +
+                '</div>' +
+            '</div>';
+
+            cart_total = cart_total + parseInt(dumb[loop].amount);
+          }
+        }
+
+        if(dumb.length > 0){
+          $("#form-donate [name=amount]").val(cart_total);
+          cart_item = cart_item +
+          '<div class="col-md-12" style="padding-left:20%">' +
+            '<div class="clearfix"></div>' +
+            '<hr class="line-summary text-color-content">' +
+            '<div class="clearfix"></div>' +
+            '<div class="col-md-3"></div>' +
+            '<div class="col-md-3" style="text-align:right;">' +
+               '<p class="gillsans-content text-alert article-content-cart">Rp. ' + currencyFormatChanger_static(String(cart_total)) + '</p>' +
+            '</div>' +
+            '<div class="col-md-3" style="text-align:center;"></div>' +
+            '<div class="clearfix"></div>' +
+          '</div>';
+        }else{
+          cart_item = cart_item + '<p>Belum ada donasi.</p>';
+        }
+
+        $("#cart-container").html(cart_item);
+
+        $("[delete-index]").on("click", function(){
+          index = parseInt($(this).attr('delete-index'));
+          dumb  = r_getCookie('ayom_donate_money_cart');
+          dumb = JSON.parse(dumb);
+          if(dumb.length == 1){
+            dumb = "";
+          }else{
+            dumb.splice(index, 1);
+            dumb = JSON.stringify(dumb);
+          }
+
+          r_setCookie('ayom_donate_money_cart', dumb);
+          read_cart();
+        });
+      }
+
+      function donate_now(){
+        error = 0;
+        if($("#form-donate [name=name]").val() == "") error = 1;
+        if($("#form-donate [name=email]").val() == "") error = 1;
+        if($("#form-donate [name=phone]").val() == "") error = 1;
+        if($("#form-donate [name=acc_bank]").val() == "") error = 1;
+        if($("#form-donate [name=acc_number]").val() == "") error = 1;
+        if($("#form-donate [name=amount]").val() == "") error = 1;
+        if($("#form-donate [name=message]").val() == "") error = 1;
+        if($("#form-donate [name=agreement_check]:checked").length == 0) error = 1;
+
+        if(error == 1) {
+          alert('Please fill in all information!');
+          return false;
+        }
+
+        items = r_getCookie('ayom_donate_money_cart');
+        items = JSON.parse(items);
+
+        param = {
+					"name" 					 : $("#form-donate [name=name]").val(),
+					"email" 			   : $("#form-donate [name=email]").val(),
+					"phone" 				 : $("#form-donate [name=phone]").val(),
+					"acc_bank" 			 : $("#form-donate [name=acc_bank]").val(),
+					"acc_number" 		 : $("#form-donate [name=acc_number]").val(),
+					"amount" 				 : $("#form-donate [name=amount]").val(),
+					"message" 			 : $("#form-donate [name=message]").val(),
+					"agreement_check": $("#form-donate [name=agreement_check]:checked").length,
+					"items"					 : items
+				};
+
+				$.ajax({
+					url: base_url + "/data/router.php?session=addData&group=operation&target=donation_money",
+					type: 'post',
+					dataType: 'json',
+					async: false,
+					data: param,
+					success: function(result){
+						if(result.feedStatus == "success") {
+              r_setCookie('ayom_donate_money_cart', "");
+              window.location = "../thank_you.html";
+						}
+					},
+					complete: function(xhr,status) {  },
+					error: function(xhr,status,error) { console.log(xhr); }
+				});
+      }
+    </script>
+</body>
+</html>

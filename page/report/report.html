@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayom</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/ayomlogo.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+</head>
+<body>
+    <div class="container">
+<!-- Header -->
+        <header class="parent"></header>
+<!-- END Header -->
+<!-- Main -->
+        <main class="parent">
+
+    <!-- Main Tab-->
+            <div class="blog-article article-blog article-title">
+                <p class="gillsans-22 tab-article">LAPORAN</p>
+            </div>
+            <div class="clearfix"></div>
+<!-- Main Tab-->
+            <div class="tab gillsans-14 article-title-blog">
+                <button class="tab-blog" onclick="openCity('Donasi')">DONASI</button>
+                <button class="tab-blog" onclick="openCity('Rek-Koran')">REK. KORAN</button>
+                <button class="tab-blog" onclick="openCity('Ikhtisar-Keuangan')">IKHTISAR KEUANGAN</button>
+                <button class="tab-blog" onclick="openCity('Laporan-Tahunan')">LAPORAN TAHUNAN</button>
+                <button class="tab-blog" onclick="openCity('Kebijakan-Prosedur')">KEBIJAKAN & PROSEDUR</button>
+            </div>
+            <hr class="tab-hr">
+<!-- Main Content-->
+    <!-- Donasi Tab-->
+            <div id="Donasi" class="tabcontent1 city">
+                <p class="gillsans-15 tab-article chart-title-donasi" id="donation-title-trend" style="text-align:center; margin-top:50px;">TREN DONASI</p>
+                <img src="../../assets/img/chart/donasi-chart-1.jpg" id="donation-trend" class="chart-img-donasi">
+
+                <div id="donation-overview"></div>
+                <div class="clearfix"></div>
+
+                <hr style="margin-top:50px;">
+                <p class="gillsans-20 tab-article" id="donation-title"></p>
+                <p class="gillsans-content text-color-content" id="donation-description"></p>
+                <div id="donation-equipments"></div>
+                <div class="clearfix"></div>
+            </div>
+    <!-- Rek. Koran Tab-->
+            <div id="Rek-Koran" class="tabcontent1 city" style="display:none">
+                <p class="gillsans-content text-color-content" id="rekening-koran"></p>
+                <p class="gillsans-content text-color-content" style="margin-top:25px; margin-bottom:20px; font-weight:500;">Dokumen yang dapat di unduh pada file dibawah ini :</p>
+                <div class="clearfix"></div>
+
+                <div id="checking-account"></div>
+
+                <div class="clearfix"></div>
+            </div>
+    <!-- Ikhtisar Tab-->
+            <div id="Ikhtisar-Keuangan" class="tabcontent1 city" style="display:none">
+                <p class="gillsans-20 tab-article">Laporan Laba Rugi</p>
+                <p class="gillsans-content text-color-content" id="laba-rugi"></p>
+                <p class="gillsans-15 tab-article" style="text-align:center; margin-top:50px;" id="pl_title_1"></p>
+                <img id="pl_picture_1" src="" class="chart-tabel-ikhtisar">
+                <div class="clearfix"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 twice-half" id="pl_box_2">
+                    <div class="article-title-box" style="margin-top:50px;"><p class="gillsans-15" id="pl_title_2"></p></div>
+                    <img id="pl_picture_2" src="" class="chart-pie-ikhtisar">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 twice-half" id="pl_box_3">
+                    <div class="article-title-box" style="margin-top:50px;"><p class="gillsans-15" id="pl_title_3"></p></div>
+                    <img id="pl_picture_3" src="" class="chart-pie-ikhtisar">
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 twice-half" id="pl_box_4">
+                    <div class="article-title-box" style="margin-top:75px; margin-bottom:25px;"><p class="gillsans-15" id="pl_title_4"></p></div>
+                        <img id="pl_picture_4" src="" class="chart-pie-ikhtisar">
+                    </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 twice-half" id="pl_box_5">
+                    <div class="article-title-box" style="margin-top:75px; margin-bottom:25px;"><p class="gillsans-15" id="pl_title_5"></p></div>
+                    <img id="pl_picture_5" src="" class="chart-pie-ikhtisar">
+                </div>
+                <div class="clearfix"></div>
+                <p class="gillsans-15 tab-article" style="text-align:center; margin-top:50px; margin-bottom:50px;" id="pl_title_6"></p>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;" id="pl_box_6">
+                    <div class="btn-money backrounded">
+                        <span class="gillsans"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18" id="pl_box_7"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;" id="pl_box_8">
+                    <div class="btn-money backrounded">
+                        <span class="gillsans"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18" id="pl_box_9"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;" id="pl_box_10">
+                    <div class="btn-money backrounded">
+                        <span class="gillsans"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18" id="pl_box_11"></div>
+                <div class="clearfix"></div>
+                <p class="gillsans-15 tab-article" style="text-align:center; margin-top:100px; margin-bottom:50px;" id="pl_title_7"></p>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;" id="pl_box_12">
+                    <div class="btn-money backrounded">
+                        <span class="gillsans"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18" id="pl_box_13"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;" id="pl_box_14">
+                    <div class="btn-money backrounded">
+                        <span class="gillsans"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18" id="pl_box_15"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;" id="pl_box_16">
+                    <div class="btn-money backrounded">
+                        <span class="gillsans"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18" id="pl_box_17"></div>
+                <div class="clearfix"></div>
+                <hr style="margin-top:50px;">
+                <p class="gillsans-15 tab-article" style="text-align:center; margin-top:50px;" id="annual-title-trend"></p>
+                <img src="../../assets/img/chart/donasi-chart-2.jpg" id="annual-trend" class="chart-img-donasi">
+                <div class="clearfix"></div>
+                <hr style="margin-top:50px;">
+                <p class="gillsans-20 tab-article">Laporan Arus Kas</p>
+                <p class="gillsans-content text-color-content" id="arus_kas"></p>
+                <p class="gillsans-15 tab-article" style="text-align:center; margin-top:50px; margin-bottom:50px;" id="cash_flow_title"></p>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="btn-money backrounded">
+                        <span class="gillsans" id="cash_flow_caption_1"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18" id="cash_flow_value_1"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="btn-money backrounded">
+                        <span class="gillsans" id="cash_flow_caption_2"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18" id="cash_flow_value_2"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="btn-money backrounded">
+                        <span class="gillsans" id="cash_flow_caption_3"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18" id="cash_flow_value_3"></div>
+                <div class="clearfix"></div>
+                <p class="gillsans-15 tab-article" style="text-align:center; margin-top:50px;" id="cash_flow_title_trend"></p>
+                <img src="#" id="cash_flow_picture" class="chart-arus-ikhtisar">
+                <hr style="margin-top:100px;">
+                <p class="gillsans-20 tab-article">Laporan Neraca</p>
+                <p class="gillsans-content text-color-content" id="neraca"></p>
+                <p class="gillsans-15 tab-article" style="text-align:center; margin-top:50px; margin-bottom:50px;" id="balance_title"></p>
+                <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom:20px;">
+                        <div class="btn-money title-aset">
+                            <span class="gillsans-15 font-aset">ASET</span>
+                        </div>
+                    </div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="content-aset">
+                        <span class="gillsans-15 font-aset">ASET LANCAR</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18 padding-right-40 font-aset" id="balance_aset_lancar"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="content-aset">
+                        <span class="gillsans-15 font-aset">ASET TIDAK LANCAR</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18 padding-right-40 font-aset" id="balance_aset_tidak_lancar"></div>
+                <div class="clearfix"></div>
+                <hr class="hr-aset">
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="content-aset">
+                        <span class="gillsans-15 font-aset">TOTAL ASET</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18 padding-right-40 font-aset" id="balance_total_aset"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom:20px; margin-top:25px;">
+                        <div class="btn-money title-aset">
+                            <span class="gillsans-15 font-aset">LIABILITAS</span>
+                        </div>
+                    </div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="content-aset">
+                        <span class="gillsans-15 font-aset">LIABILITAS LANCAR</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18 padding-right-40 font-aset" id="balance_liabilitas_lancar"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="content-aset">
+                        <span class="gillsans-15 font-aset">LIABILITAS TIDAK LANCAR</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18 padding-right-40 font-aset" id="balance_liabilitas_tidak_lancar"></div>
+                <div class="clearfix"></div>
+                <hr class="hr-aset">
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="content-aset">
+                        <span class="gillsans-15 font-aset">TOTAL LIABILITAS</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18 padding-right-40 font-aset" id="balance_total_liabilitas"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom:20px; margin-top:25px;">
+                        <div class="btn-money title-aset">
+                            <span class="gillsans-15 font-aset">EKUITAS</span>
+                        </div>
+                    </div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="content-aset">
+                        <span class="gillsans-15 font-aset">MODAL SAHAM</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18 padding-right-40 font-aset" id="balance_modal_saham"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="content-aset">
+                        <span class="gillsans-15 font-aset">LABA DITAHAN</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18 padding-right-40 font-aset" id="balance_laba_ditahan"></div>
+                <div class="clearfix"></div>
+                <hr class="hr-aset">
+                <div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">
+                    <div class="content-aset">
+                        <span class="gillsans-15 font-aset">TOTAL EKUITAS</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18 padding-right-40 font-aset" id="balance_total_ekuitas"></div>
+                <div class="clearfix"></div>
+            </div>
+    <!-- Laporan Tab-->
+            <div id="Laporan-Tahunan" class="tabcontent1 city" style="display:none">
+                <p class="gillsans-content text-color-content" id="annual_text_1"></p>
+                <div class="clearfix"></div>
+                <div class="bg" id="annual_picture_1"><img src="../../assets/img/dogface3.jpg" class="img-jumbo"></div>
+                <div class="clearfix"></div>
+                <p class="gillsans-content text-color-content" id="annual_text_2"></p>
+                <div class="col-md-7 col-sm-7" style="margin-top:50px;" id="annual_picture_2"><img src="../../assets/img/gallery/petcargo1.jpg" class="img-fit-cover img-shop tab-donate"></div>
+                <div class="col-md-5 col-sm-5 padding-top" id="annual_caption">
+                    <p class="gillsans-bold tab-article text-color-content"></p>
+                </div>
+                <div class="clearfix"></div>
+                <p class="gillsans-content text-color-content" id="annual_text_3"></p>
+                <div class="clearfix"></div>
+                <div class="bg" id="annual_picture_3"><img src="../../assets/img/dogball2.jpg" class="img-jumbo"></div>
+                <p class="gillsans-content text-color-content" style="margin-bottom:35px;" id="annual_picture_4"></p>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gillsans-14-5" style="margin-bottom:5px;">
+                    <p><a href="#" id="annual_attachment"><img src="../../assets/img/icon/file.png" style="width:20px; margin-right:5px;"/>Annual report 2018 - There are lots of ways to make good things happen</a></p>
+                </div>
+            </div>
+    <!-- Kebijakan Tab-->
+            <div id="Kebijakan-Prosedur" class="tabcontent1 city" style="display:none">
+                <p class="gillsans-content text-color-content" id="policies_description"></p>
+                <div class="row">
+                  <div class="col-sm-12" id="policies_box">
+                    <div class="col-md-5 col-sm-5 padding-top" id="policies_caption">
+                        <p class="gillsans-bold tab-article text-color-content"></p>
+                    </div>
+                    <div class="col-md-7 col-sm-7" style="margin-top:50px;" id="policies_picture"><img src="../../assets/img/gallery/dogball1.jpg" class="img-fit-cover img-shop tab-donate"></div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <p class="gillsans-content text-color-content" style="margin-bottom:35px;" id="policies_footer">.</p>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gillsans-14-5" style="margin-bottom:5px;">
+                    <p><a href="#" id="policies_attachment" target="_blank"><img src="../../assets/img/icon/file.png" style="width:20px; margin-right:5px;"/>Kebijakan dan prosedur Operational Harian</a></p>
+                </div>
+                <div class="article-title-box" style="margin-top:50px; margin-bottom:30px; padding-top:50px;"><p class="gillsans-15">Feedback untuk Kebijakan dan Prosedur</p></div>
+                <form id="syncrom" f-group="support" f-target="feedback_policy" enctype="multipart/form-data">
+                  <div class="input-group input-width-cart">
+                      <input type="text" name="name" class="form-control input-default-form gillsans" placeholder="Nama">
+                  </div>
+                  <div class="input-group input-width-cart">
+                      <input type="email" name="email" class="form-control input-default-form gillsans" placeholder="Email">
+                  </div>
+                  <div class="input-group input-width-cart">
+                      <input type="text" name="phone" class="form-control input-default-form gillsans" placeholder="Nomor Mobile">
+                  </div>
+                  <div class="input-group input-width-cart">
+                      <input type="text" name="title" class="form-control input-default-form gillsans" placeholder="Judul Bab">
+                  </div>
+                  <div class="input-group input-width-cart">
+                      <input type="text" name="page" class="form-control input-default-form gillsans" placeholder="Halaman">
+                  </div>
+                  <div class="input-group input-width-cart">
+                      <input type="text" name="paragraph" class="form-control input-default-form gillsans" placeholder="Paragraf dan Ayat">
+                  </div>
+                  <div class="input-group input-width-cart">
+                       <textarea type="text" name="message" class="form-control input-default-form gillsans" placeholder="Pesan" rows="10" cols="37" style="resize:none;"></textarea>
+                  </div>
+                  <button type="submit" class="button-circle-cart btn-equipment gillsans" style="margin-bottom:20px;">SEND</button>
+                </form>
+            </div>
+            <div class="clearfix"></div>
+        </main>
+<!-- END Main -->
+<!-- Footer -->
+        <footer class="parent" style="margin-bottom:30px;"></footer>
+<!-- END Footer -->
+    </div>
+    <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script>
+        function openCity(cityName) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
+        }
+    </script>
+    <script src="../../assets/js/public.js"></script>
+    <script src="../../assets/js/partial.js"></script>
+    <script>
+      $(function(){
+        donation();
+        checking_account();
+        report_policies();
+        report_annual();
+        report_profit_and_loss();
+        report_cash_flow();
+        report_balance_sheets();
+
+        p_formHandler('syncrom', 'addData', 'feed_thanks.html', 'yes');
+      });
+
+      function donation(){
+        var dumb         = p_getData('operation', 'home_donateFetch', '', 'id_data="4"');
+        var donate_group = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        $("#donation-title").html(donate_group.title.toUpperCase());
+        $("#donation-description").html(donate_group.description);
+
+        var dumb  = p_getData('operation', 'report_descriptionFetch', '', 'id_data="1"');
+        var desc  = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        $('#rekening-koran').html(desc.rekening_koran);
+        $('#laba-rugi').html(desc.laba_rugi);
+        $('#arus-kas').html(desc.arus_kas);
+        $('#neraca').html(desc.neraca);
+
+        //----
+        var dumb = p_getData('operation', 'report_donation_trendFetch', '', 'id_data="1"');
+        var data = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        if(data.picture == "") {
+          $("#donation-title-trend").remove();
+          $("#donation-trend").remove();
+        }else{
+          $("#donation-title-trend").html(data.title);
+          $("#donation-trend").attr('src', '../../assets/report/' + data.picture);
+        }
+
+        //----
+        var dumb = p_getData('operation', 'report_donation_overview');
+        var data = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        var html = "";
+
+        for(var loop=0; loop<data.length; loop++){
+          html = html +
+          '<hr style="margin-top:50px;">' +
+          '<p class="gillsans-15 tab-article" style="text-align:center; margin-top:50px; margin-bottom:50px;">' + data[loop].title + '</p>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">' +
+              '<div class="btn-money backrounded">' +
+                  '<span class="gillsans">' + data[loop].caption_1 + '</span>' +
+              '</div>' +
+          '</div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18">' + data[loop].value_1 + '</div>' +
+          '<div class="clearfix"></div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">' +
+              '<div class="btn-money backrounded">' +
+                  '<span class="gillsans">' + data[loop].caption_2 + '</span>' +
+              '</div>' +
+          '</div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18">' + data[loop].value_2 + '</div>' +
+          '<div class="clearfix"></div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">' +
+              '<div class="btn-money backrounded">' +
+                  '<span class="gillsans">' + data[loop].caption_3 + '</span>' +
+              '</div>' +
+          '</div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18">' + data[loop].value_3 + '</div>' +
+          '<div class="clearfix"></div>';
+        }
+
+        $("#donation-overview").html(html);
+
+        //----
+        var dumb = p_getData('operation', 'report_donation_equipments');
+        var data = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        var html = "";
+
+        for(var loop=0; loop<data.length; loop++){
+          if(loop > 0) html = html + '<hr style="margin-top:50px;">';
+
+          html = html +
+          '<p class="gillsans-15 tab-article" style="text-align:center; margin-top:50px; margin-bottom:50px;">' + data[loop].title + '</p>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">' +
+              '<div class="btn-equipment backrounded">' +
+                  '<span class="gillsans">' + data[loop].caption_1 + '</span>' +
+              '</div>' +
+          '</div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18">' + data[loop].value_1 + '</div>' +
+          '<div class="clearfix"></div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">' +
+              '<div class="btn-equipment backrounded">' +
+                  '<span class="gillsans">' + data[loop].caption_2 + '</span>' +
+              '</div>' +
+          '</div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18">' + data[loop].value_2 + '</div>' +
+          '<div class="clearfix"></div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6" style="margin-bottom:20px;">' +
+              '<div class="btn-equipment backrounded">' +
+                  '<span class="gillsans">' + data[loop].caption_3 + '</span>' +
+              '</div>' +
+          '</div>' +
+          '<div class="col-md-6 col-sm-6 col-xs-6 text-center gillsans-18">' + data[loop].value_3 + '</div>' +
+          '<div class="clearfix"></div>';
+        }
+
+        $("#donation-equipments").html(html);
+      }
+
+      function checking_account(){
+        var dumb = p_getData('operation', 'report_checking_account');
+        var data = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        var html = "";
+        var year = "";
+        for(var loop=0; loop<data.length; loop++){
+
+          if(year != data[loop].year) {
+            if(loop > 0) html = html + '</div><div class="clearfix"></div>';
+
+            html = html +
+            '<div class="col-lg-2 col-md-2 col-sm-2 gillsans-15" style="font-weight:500;">' +
+                '<p>' + data[loop].year + ' :</p>' +
+            '</div>' +
+            '<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 gillsans-14-5" style="margin-bottom:20px;">';
+
+            year = data[loop].year;
+          }
+
+          html = html + '<p class="col-md-3 col-xs-6"><a href="../../assets/report/' + data[loop].attachment + '" target="_blank"><img src="../../assets/img/icon/file.png" style="width:15px; margin-right:5px;"/>' + data[loop].caption + '</a></p>';
+        }
+
+        html = html + '</div>';
+
+        $("#checking-account").html(html);
+      }
+
+      function report_policies(){
+        var dumb         = p_getData('operation', 'report_policiesFetch', '', 'id_data="1"');
+        var donate_group = (dumb.feedData != undefined) ? dumb.feedData : "";
+        var donate_inner = "";
+
+        $("#policies_description").html(donate_group.description);
+        $("#policies_footer").html(donate_group.footer);
+
+        if(donate_group.attachment != "") {
+          $("#policies_attachment").attr('href', '../../assets/report/' + donate_group.attachment);
+        }
+
+        if(donate_group.caption == "") {
+          $("#policies_caption").remove();
+          $("#policies_picture").removeClass('col-md-7 col-sm-7').addClass('col-sm-12');
+        }
+        else {
+            $("#policies_caption p").html(donate_group.caption);
+        }
+
+        if(donate_group.picture == "") {
+          $("#policies_picture").remove();
+        }
+        else {
+            $("#policies_picture img").attr('src', '../../assets/report/' + donate_group.picture);
+        }
+      }
+
+      function report_annual(){
+        var dumb         = p_getData('operation', 'report_annualFetch', '', 'id_data="1"');
+        var donate_group = (dumb.feedData != undefined) ? dumb.feedData : "";
+        var donate_inner = "";
+
+        $("#annual_text_1").html(donate_group.text_1);
+        $("#annual_text_2").html(donate_group.text_2);
+        $("#annual_text_3").html(donate_group.text_3);
+        $("#annual_text_4").html(donate_group.text_4);
+
+        if(donate_group.attachment != "") {
+          $("#annual_attachment").attr('href', '../../assets/report/' + donate_group.attachment);
+        }else{
+          $("#annual_attachment").remove();
+        }
+
+        if(donate_group.caption == "") {
+          $("#annual_caption").remove();
+          $("#annual_picture_2").removeClass('col-md-7 col-sm-7').addClass('col-sm-12');
+        }
+        else {
+            $("#annual_caption p").html(donate_group.caption);
+        }
+
+        if(donate_group.picture_1 == "") {
+          $("#annual_picture_1").remove();
+        }
+        else {
+            $("#annual_picture_1 img").attr('src', '../../assets/report/' + donate_group.picture_1);
+        }
+
+        if(donate_group.picture_2 == "") {
+          $("#annual_picture_2").remove();
+        }
+        else {
+            $("#annual_picture_2 img").attr('src', '../../assets/report/' + donate_group.picture_2);
+        }
+
+        if(donate_group.picture_3 == "") {
+          $("#annual_picture_3").remove();
+        }
+        else {
+            $("#annual_picture_3 img").attr('src', '../../assets/report/' + donate_group.picture_3);
+        }
+
+        //----
+        var dumb = p_getData('operation', 'report_annual_trendFetch', '', 'id_data="1"');
+        var data = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        if(data.picture == "") {
+          $("#annual-title-trend").remove();
+          $("#annual-trend").remove();
+        }else{
+          $("#annual-title-trend").html(data.title);
+          $("#annual-trend").attr('src', '../../assets/report/' + data.picture);
+        }
+      }
+
+      function report_profit_and_loss(){
+        var dumb = p_getData('operation', 'report_profit_and_lossFetch', '', 'id_data="1"');
+        var data = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        $("#pl_title_1").html(data.title_1);
+        $("#pl_title_2").html(data.title_2);
+        $("#pl_title_3").html(data.title_3);
+        $("#pl_title_4").html(data.title_4);
+        $("#pl_title_5").html(data.title_5);
+        $("#pl_title_6").html(data.title_6);
+        $("#pl_title_7").html(data.title_7);
+
+        $("#pl_picture_1").attr('src', '../../assets/report/profit_and_loss/' + data.picture_1);
+        $("#pl_picture_2").attr('src', '../../assets/report/profit_and_loss/' + data.picture_2);
+        $("#pl_picture_3").attr('src', '../../assets/report/profit_and_loss/' + data.picture_3);
+        $("#pl_picture_4").attr('src', '../../assets/report/profit_and_loss/' + data.picture_4);
+        $("#pl_picture_5").attr('src', '../../assets/report/profit_and_loss/' + data.picture_5);
+
+        $("#pl_box_6 span").html(data.caption_1);
+        $("#pl_box_8 span").html(data.caption_2);
+        $("#pl_box_10 span").html(data.caption_3);
+        $("#pl_box_12 span").html(data.caption_4);
+        $("#pl_box_14 span").html(data.caption_5);
+        $("#pl_box_16 span").html(data.caption_6);
+
+        $("#pl_box_7").html(data.value_1);
+        $("#pl_box_9").html(data.value_2);
+        $("#pl_box_11").html(data.value_3);
+        $("#pl_box_13").html(data.value_4);
+        $("#pl_box_15").html(data.value_5);
+        $("#pl_box_17").html(data.value_6);
+
+        if(data.picture_2 == "") $("#pl_picture_2").remove();
+        if(data.picture_3 == "") $("#pl_picture_3").remove();
+        if(data.picture_4 == "") $("#pl_picture_4").remove();
+        if(data.picture_5 == "") $("#pl_picture_5").remove();
+
+        if(data.title_2 == "" && data.picture_2 == "") $("#pl_box_2").remove();
+        if(data.title_3 == "" && data.picture_3 == "") $("#pl_box_3").remove();
+        if(data.title_4 == "" && data.picture_4 == "") $("#pl_box_4").remove();
+        if(data.title_5 == "" && data.picture_5 == "") $("#pl_box_5").remove();
+
+        if(data.caption_1 == "") $("#pl_box_6").remove();
+        if(data.caption_2 == "") $("#pl_box_8").remove();
+        if(data.caption_3 == "") $("#pl_box_10").remove();
+        if(data.caption_4 == "") $("#pl_box_12").remove();
+        if(data.caption_5 == "") $("#pl_box_14").remove();
+        if(data.caption_6 == "") $("#pl_box_16").remove();
+
+        if(data.value_1 == "") $("#pl_box_7").remove();
+        if(data.value_2 == "") $("#pl_box_9").remove();
+        if(data.value_3 == "") $("#pl_box_11").remove();
+        if(data.value_4 == "") $("#pl_box_13").remove();
+        if(data.value_5 == "") $("#pl_box_15").remove();
+        if(data.value_6 == "") $("#pl_box_17").remove();
+
+      }
+
+      function report_cash_flow(){
+        var dumb = p_getData('operation', 'report_cash_flowFetch', '', 'id_data="1"');
+        var data = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        $("#cash_flow_title").html(data.title_cash_flow);
+        $("#cash_flow_title_trend").html(data.title_trend);
+
+        $("#cash_flow_caption_1").html(data.caption_1);
+        $("#cash_flow_caption_2").html(data.caption_2);
+        $("#cash_flow_caption_3").html(data.caption_3);
+
+        $("#cash_flow_value_1").html(data.value_1);
+        $("#cash_flow_value_2").html(data.value_2);
+        $("#cash_flow_value_3").html(data.value_3);
+
+        if(data.picture != "") {
+          $("#cash_flow_picture").attr('src', '../../assets/report/cash_flow/' + data.picture);
+        }else{
+          $("#cash_flow_picture").remove();
+        }
+      }
+
+      function report_balance_sheets(){
+        var dumb = p_getData('operation', 'report_balance_sheetsFetch', '', 'id_data="1"');
+        var data = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        $("#balance_title").html(data.title);
+
+        $("#balance_aset_lancar").html(data.aset_lancar);
+        $("#balance_aset_tidak_lancar").html(data.aset_tidak_lancar);
+        $("#balance_total_aset").html(data.total_aset);
+
+        $("#balance_liabilitas_lancar").html(data.liabilitas_lancar);
+        $("#balance_liabilitas_tidak_lancar").html(data.liabilitas_tidak_lancar);
+        $("#balance_total_liabilitas").html(data.total_liabilitas);
+
+        $("#balance_modal_saham").html(data.modal_saham);
+        $("#balance_laba_ditahan").html(data.laba_ditahan);
+        $("#balance_total_ekuitas").html(data.total_ekuitas);
+
+      }
+
+    </script>
+</body>
+</html>

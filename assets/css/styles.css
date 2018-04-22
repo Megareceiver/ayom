@@ -1,0 +1,2344 @@
+/* GLOBAL */
+/* ============================================================================= */
+/* ============================================================================= */
+.bubble{
+  display: none;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: orange;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 0;
+  padding: 0 10px;
+}
+
+.bubble.active {
+  display: inline-block;
+}
+
+/* NAVBAR */
+/* ============================================================================= */
+ul.nav.navbar-nav li.right {
+
+}
+
+/* ============================================================================= */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid rgb(158, 155, 156);
+
+  }
+  .display-none{
+      display: none;
+  }
+  .img-center{
+      text-align: center;
+  }
+  .bg{
+
+      /* The image used */
+    /* background-image: url(../../assets/img/dogface3.jpg); */
+
+    /* Full height */
+    height: 50%;
+    /* height: 100%;
+    margin: 0; */
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .select-box { position: relative; }
+.select-box select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-box select {
+    font-family: inherit;
+    border-radius: unset;
+    background-color: #FFF;
+    width: 100%;
+    font-size: 12px;
+    color: #000;
+}
+
+.select-box:after {
+    position: absolute;
+    bottom: 13px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 0.4em solid transparent;
+    border-right: 0.4em solid transparent;
+    border-top: 0.4em solid #000;
+    pointer-events: none;
+}
+/*=============================================================================================*/
+/* FONT */
+.gillsans {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-weight: 100;
+}
+.gillsans-bold {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-weight: 500;
+}
+.gillsans-30-404 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-20-404 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-14-404 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-24 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-22 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-20 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-19 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 26px;
+}
+.gillsans-18 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-16 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 26px;
+}
+.gillsans-15 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-14-5 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+}
+.gillsans-14 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-12 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 26px;
+}
+.gillsans-12-5 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 17px;
+}
+.gillsans-11 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-10 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+.gillsans-content {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 18px;
+}
+/*=============================================================================================*/
+/* HEADER */
+header.parent .main-menu{ font-weight: narrow; }
+header.parent img{ width : 239.841px; }
+header.parent img.smallImg{
+  width: auto;
+  height: 100%;
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+header.parent img.smalimg{
+  width: 100%px;
+  height: 35px;
+  float: left;
+
+}
+
+header.parent .main-menu a span {
+  border-bottom: 2px solid #fff;
+}
+
+header.parent .main-menu a:hover span,
+header.parent .main-menu a.active span{
+  border-color: #ED1C24;
+}
+
+header.parent.fly {
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+header.parent .cart{
+  float:right;
+  margin-left:358px;
+}
+
+/*=============================================================================================*/
+  /* NAVBAR */
+  .navbar-default.plain{
+    background-color: #FFF;
+    border-color: #FFF;
+    padding: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+  }
+
+  .navbar-default .navbar-toggle {
+    border-color: #333;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form { border-color:#fff; }
+  .btn-default, .btn-default.active:active, .btn-default.visited, .btn-default:focus{
+    background-color: #605B5D;
+    color: #FFF;
+  }
+
+.navbar-default .navbar-brand { width: 100%; text-align: center; margin-bottom: 25px; }
+.navbar-brand>img { display: initial; }
+.navbar-collapse#syncard-nav { position: relative; }
+
+.black{
+    color: black;
+}
+
+/*=============================================================================================*/
+/* ARTICLE */
+.article{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.article-blog{
+    width: 100%;
+    margin-top: 30px;
+    /* margin-bottom: 50px; */
+}
+.blog-article{
+    /* padding: 6px 20px; */
+}
+.article-title-blog{
+    margin-top: -20px;
+}
+.article-title{
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    color: black;
+}
+.article-blog-archive{
+    padding-left: 50px;
+}
+.article-subtitle{
+    margin-top:-15px;
+}
+.article-content{
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    color:rgb(122, 116, 118);
+}
+.article-content-box{
+    color:rgb(122, 116, 118);
+}
+.article-title-box{
+    text-align: center;
+    color:black;
+    margin-top: 10px;
+}
+.article-box{
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+  }
+  .article-box.story{
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+.img-petcargo{
+   background-image: url(../img/gallery/petcargo1.jpg);
+   background-size: cover;
+}
+.img-food{
+    background-image: url(../img/gallery/food.jpg);
+    background-size: cover;
+ }
+ .img-petcare{
+    background-image: url(../img/gallery/petcare.jpg);
+    background-size: cover;
+ }
+ .img-thanks{
+    background-image: url(../img/gallery/thanks.jpg);
+    background-size: cover;
+ }
+ .gallery-position{
+     margin-top: -30px;
+     margin-bottom: 60px;
+ }
+
+
+/*=============================================================================================*/
+/* FOOTER */
+ .text-color-footer{
+     color: #5d585a;
+ }
+ .text-color-content{
+    color:rgb(122, 116, 118);
+ }
+.license-right{
+    float:right;
+}
+.license-left{
+    float: left;;
+}
+.license-center{
+    text-align: center;
+}
+.title-footer{
+    width: 100px;
+    float: left;
+}
+.button-default{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: 5px;
+    margin-right: 20px;
+    padding: 0px 12px;
+    height: 23px;
+}
+.input-default{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #ddd;
+    height: 23px;
+    padding: 6px 6px;
+    font-size: 13px;
+}
+.input-default-form{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #fff;
+    height: 23px;
+    padding: 6px 6px;
+    font-size: 13px;
+}
+.input-group{
+    border-radius: none;
+}
+.footer-hr{
+    margin-top:100px;
+}
+
+/*=============================================================================================*/
+/* TAB MENU */
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    padding-left: 4px;
+    padding-right: 5px;
+    overflow-x: auto;
+    max-width: 100%;
+    display: flex;
+}
+.tab2 {
+    padding-left: 4px;
+    padding-right: 5px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:first-child {
+  padding-left: 0;
+}
+
+.tab button:last-child {
+  padding-right: 0;
+}
+
+/* Change background color of buttons on hover */
+/* .tab button:hover {
+    color: #6d645a;
+} */
+
+/* Create an active/current tablink class */
+/* .tab button.active {
+    color: #6d645a;
+} */
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 20px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+.tabcontent1 {
+    /* padding: 6px 20px; */
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+.tab-hr{
+    margin-top: -5px;
+    margin-bottom: 45px;
+}
+.tab-article{
+    margin-bottom: 20px;
+}
+.tab-img{
+    margin-top:60px;
+}
+.tab-img-center{
+    display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
+      height: auto;
+  }
+  .text-alert{
+    color: #ba5860;
+  }
+  .btn-send{
+    background-color: #ba5860;
+  }
+  .btn-shop{
+    background-color: #ead6ad;
+  }
+  .btn-shop-addcart{
+    background-color: #ead6ad;
+  }
+  .btn-equipment-addcart{
+    background-color: #83786b;
+  }
+  .btn-equipment{
+    background-color: #83786b;
+  }
+  .btn-food{
+    background-color: #4e190f;
+  }
+  .btn-medical{
+    background-color: #0f468c;
+  }
+  .btn-money{
+    background-color: #b95860;
+  }
+  .tab-equipment:focus {
+    color: #83786b;
+  }
+  .tab-food:focus {
+    color: #4e190f;
+  }
+  .tab-medical:focus {
+    color: #0f468c;
+  }
+  .tab-money:focus {
+    color: #b95860;
+  }
+  .tab-equipment:hover{
+    color: #83786b;
+  }
+  .tab-food:hover{
+    color: #4e190f;
+  }
+  .tab-medical:hover{
+    color: #0f468c;
+  }
+  .tab-money:hover{
+    color: #b95860;
+  }
+  .tab-blog:focus {
+    color: #83786b;
+  }
+  .tab-blog:hover{
+    color: #83786b;
+  }
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.check-left{
+    margin-left:20px;
+}
+
+
+/*=============================================================================================*/
+.navbar-header {
+  margin-bottom: 15px;
+}
+.navbar-header #topnav-logo {
+  margin-top: 15px;
+}
+
+/*=============================================================================================*/
+/* RESPONSIVE */
+@media (max-width: 238px){
+    .line-contact{
+        width: 100% !important;
+        border-top: 1px solid gainsboro !important;
+    }
+    .padding-about{
+        /* padding-top: 11%; */
+        margin-bottom: 50px;
+        font-size:20px !important;
+        line-height: 35px;
+    }
+    .padding-top{
+        /* padding-top: 18%; */
+        margin-bottom: 50px;
+        font-size:18px !important;
+        line-height: 25px;
+        text-align: center;
+    }
+    .img-jumbo{
+        left: 100px;
+        display: block;
+        margin-left: -35px;
+        width: 122.1%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .font-aset{
+        font-size: 11px !important;
+        font-weight: 500 !important;
+    }
+    .padding-right-40{
+        padding-right: 40px;
+    }
+    .hr-aset{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 87%;
+    }
+    .content-aset{
+        width: 100%;
+        position: relative;
+        /* left: 23%; */
+        border-radius: 7px;
+        height: 30px;
+        color: black;
+        padding-top: 2.5px;
+        padding-left: 25px;
+        font-weight: 500;
+    }
+    .title-aset{
+        width: 100%;
+        position: relative;
+        /* left: 9.5%; */
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+        padding-top: 2.5px;
+        padding-left: 25px;
+    }
+    .chart-arus-ikhtisar{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; */
+    }
+    .chart-pie-ikhtisar{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; */
+    }
+    .chart-img-donasi{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .chart-tabel-ikhtisar{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .img-cart{
+        width: 75%;
+        /* left: 13%;
+        position: relative; */
+    }
+    .img-fit-cover{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .bca-account{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .input-width{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .input-width-cart{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #topnav-logo{
+        width: 80px;
+    }
+    .topnav-position{
+        position: fixed
+    }
+    .sosmed-footer{
+        width: 100%;
+        /* text-align: center; */
+        margin-left: 19px;
+        margin-top: 10px;
+    }
+    .license-footer{
+        width: 100%;
+        /* text-align: center; */
+        margin-top: 5px;
+        margin-left: 19px;
+    }
+    .input-default{
+        /* border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: #ddd;
+        height: 23px;
+        padding: 6px 6px;
+        font-size: 13px; */
+        margin-left: 19px;
+    }
+    .button-circle {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        margin-top: 65px;
+      }
+      .button-circle-form {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+    margin: 10px -40px;
+    left: 50%;
+      }
+      .button-circle-cart {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+        margin: 10px -40px;
+        left: 50%;
+      }
+      .button-circle-little {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        width: 27px;
+        height:27px;
+        border-radius: 100%;
+        /* position: relative; */
+        margin-top: 50px;
+        margin-bottom: 20px;
+        /* left: 26%; */
+      }
+      .backrounded{
+        width: 120%;
+        position: relative;
+        left: -12%;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+      padding-top: 8px;
+      padding-left: 15px;
+      font-size: 10px;
+    }
+
+      .img-fit-cover-shop{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+@media (min-width: 239px) and (max-width: 360px) {
+    .line-contact{
+        width: 100% !important;
+        border-top: 1px solid gainsboro !important;
+    }
+    .padding-about{
+        /* padding-top: 11%; */
+        margin-bottom: 50px;
+        font-size:20px !important;
+        line-height: 35px;
+    }
+    .padding-top{
+        /* padding-top: 18%; */
+        margin-bottom: 50px;
+        font-size:18px !important;
+        line-height: 25px;
+        text-align: center;
+    }
+    .img-jumbo{
+        left: 100px;
+        display: block;
+        margin-left: -35px;
+        width: 122.1%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .font-aset{
+        font-size: 11px !important;
+        font-weight: 500 !important;
+    }
+    .padding-right-40{
+        padding-right: 40px;
+    }
+    .hr-aset{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 87%;
+    }
+    .content-aset{
+        width: 100%;
+        position: relative;
+        /* left: 23%; */
+        border-radius: 7px;
+        height: 30px;
+        color: black;
+        padding-top: 2.5px;
+        padding-left: 25px;
+        font-weight: 500;
+    }
+    .title-aset{
+        width: 100%;
+        position: relative;
+        /* left: 9.5%; */
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+        padding-top: 2.5px;
+        padding-left: 25px;
+    }
+    .chart-arus-ikhtisar{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; */
+    }
+    .chart-pie-ikhtisar{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; */
+    }
+    .chart-tabel-ikhtisar{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .chart-img-donasi{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .img-cart{
+        width: 75%;
+        /* left: 13%;
+        position: relative; */
+    }
+    .bca-account{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        left: 2.5%;
+    }
+    .cart-position{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .img-fit-cover{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .input-width{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .input-width-cart{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #topnav-logo{
+        width: 80px;
+    }
+    .topnav-position{
+        position: fixed
+    }
+    .sosmed-footer{
+        width: 100%;
+        text-align: center;
+        /* margin-left: 19px; */
+        margin-top: 10px;
+    }
+    .license-footer{
+        width: 100%;
+        text-align: center;
+        /* margin-top: 5px; */
+        margin-left: 19px;
+    }
+    .button-circle {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        margin-top: 65px;
+      }
+      .button-circle-form {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+    margin: 10px -40px;
+    left: 50%;
+      }
+      .button-circle-cart {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+        margin: 10px -40px;
+        left: 50%;
+      }
+      .button-circle-little {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        width: 27px;
+        height:27px;
+        border-radius: 100%;
+        /* position: relative; */
+        margin-top: 50px;
+        margin-bottom: 20px;
+        /* left: 26%; */
+      }
+      .backrounded{
+        width: 120%;
+        position: relative;
+        left: -12%;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+      padding-top: 8px;
+      padding-left: 15px;
+      font-size: 10px;
+    }
+    .text-center{
+        text-align: right;
+        font-size: 14px;
+        padding-top: 2px;
+    }
+      .img-fit-cover-shop{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .img-shop{
+        margin-bottom: 50px;
+    }
+}
+/* extra small */
+@media (min-width: 361px) and (max-width: 599px) {
+    .line-contact{
+        width: 100% !important;
+        border-top: 1px solid gainsboro !important;
+    }
+    .padding-about{
+        /* padding-top: 11%; */
+        margin-bottom: 50px;
+        font-size:20px !important;
+        line-height: 35px;
+    }
+    .padding-top{
+        /* padding-top: 18%; */
+        margin-bottom: 50px;
+        font-size:18px !important;
+        line-height: 25px;
+        text-align: center;
+    }
+    .img-jumbo{
+        left: 100px;
+        display: block;
+        margin-left: -35px;
+        width: 122.1%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .font-aset{
+        font-size: 12px !important;
+        font-weight: 500 !important;
+    }
+    .padding-right-40{
+        padding-right: 40px;
+    }
+    .hr-aset{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 87%;
+    }
+    .content-aset{
+        width: 100%;
+        position: relative;
+        /* left: 23%; */
+        border-radius: 7px;
+        height: 30px;
+        color: black;
+        padding-top: 2.5px;
+        padding-left: 25px;
+        font-weight: 500;
+    }
+    .title-aset{
+        width: 100%;
+        position: relative;
+        /* left: 9.5%; */
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+        padding-top: 2.5px;
+        padding-left: 25px;
+    }
+    .chart-arus-ikhtisar{
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-pie-ikhtisar{
+        width: 40%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-tabel-ikhtisar{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .chart-img-donasi{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .jenis-content{
+        padding-left:80px;
+    }
+    .ukuran-content{
+        padding-left:62px;
+    }
+    .detail-content{
+        padding-left:70px;
+    }
+    .pengiriman-content{
+        padding-left:10px;
+    }
+    .del-cart{
+        margin-top:20px;
+        font-weight:500;
+    }
+    .subtotal{
+        text-align:right;
+        margin-bottom:50px;
+        padding-right:30px;
+        font-weight: 500;
+        font-size:16px;
+    }
+    .img-cart{
+        width: 75%;
+        /* left: 13%;
+        position: relative; */
+    }
+    .article-content-cart{
+
+        margin-bottom: 7px;
+
+    }
+    .bca-account{
+        width: 95%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        left: 2.5%;
+    }
+    .cart-position{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .input-width{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .input-width-cart{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #topnav-logo{
+        width: 80px;
+    }
+    .topnav-position{
+        position: fixed
+    }
+	.sosmed-footer{
+        width: 50%;
+        margin-left: 19px;
+        margin-top:10px;
+    }
+    .license-footer{
+        width: 212px;
+        float: right;
+        margin-top: -25px;
+        margin-right: 20px;
+    }
+    .img-gallery-blog{
+        width: 93%;
+        margin: 15px;
+        float: left;
+    }
+    .img-fit-cover{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .img-fit-cover-shop{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .img-shop{
+        margin-bottom: 50px;
+    }
+    /* .div-gallery-blog{
+        width: 519.86px;
+        height: 346.56px;
+    } */
+    .button-circle {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        margin-top: 65px;
+      }
+      .button-circle-form {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+    margin: 10px -40px;
+    left: 50%;
+      }
+      .button-circle-cart {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+        margin: 10px -40px;
+        left: 50%;
+      }
+      .button-circle-little {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        width: 50px;
+        height:50px;
+        border-radius: 100%;
+        /* position: relative; */
+        margin-top: 50px;
+        margin-bottom: 20px;
+        /* left: 26%; */
+      }
+      .backrounded{
+        width: 150px;
+        position: relative;
+        left: -16px;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+      padding-top: 8px;
+      padding-left: 15px;
+      font-size: 11px;
+    }
+    .text-center{
+        text-align: right;
+        font-size: 15px;
+        padding-top: 2px;
+    }
+}
+
+/* extra small to small */
+@media (min-width: 600px) and (max-width: 767px) {
+    .line-contact{
+        width: 100% !important;
+        border-top: 1px solid gainsboro !important;
+    }
+    .padding-about{
+        /* padding-top: 11%; */
+        margin-bottom: 50px;
+        font-size:20px !important;
+        line-height: 35px;
+    }
+    .padding-top{
+        /* padding-top: 18%; */
+        margin-bottom: 50px;
+        font-size:20px !important;
+        line-height: 25px;
+        text-align: center;
+    }
+    .img-jumbo{
+        left: 100px;
+        display: block;
+        margin-left: -40px;
+        width: 111%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .hr-aset{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 68%;
+    }
+    .content-aset{
+        width: 100%;
+        position: relative;
+        left: 23%;
+        border-radius: 7px;
+        height: 30px;
+        color: black;
+        padding-top: 2.5px;
+        padding-left: 25px;
+        font-weight: 500;
+    }
+    .title-aset{
+        width: 80%;
+        position: relative;
+        left: 9.5%;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+        padding-top: 2.5px;
+        padding-left: 25px;
+    }
+    .chart-arus-ikhtisar{
+        width: 75%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .twice-half{
+        width: 50%;
+        float: left;
+    }
+    .chart-pie-ikhtisar{
+        width: 45%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-tabel-ikhtisar{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .chart-img-donasi{
+        margin-top: 50px;
+        width: 450px;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .left-0{
+        left: 0%!important;
+    }
+    .tab-donate{
+        left: 15%!important;
+        width: 70%!important;
+    }
+    .jenis-content{
+        padding-left:80px;
+    }
+    .ukuran-content{
+        padding-left:62px;
+    }
+    .detail-content{
+        padding-left:70px;
+    }
+    .pengiriman-content{
+        padding-left:10px;
+    }
+    .del-cart{
+        margin-top:20px;
+        font-weight:500;
+    }
+    .subtotal{
+        text-align:right;
+        margin-bottom:50px;
+        padding-right:30px;
+        font-weight: 500;
+        font-size:16px;
+    }
+    .img-cart{
+        width: 50%;
+        /* left: 13%;
+        position: relative; */
+    }
+    .article-content-cart{
+
+        margin-bottom: 7px;
+
+    }
+    .bca-account{
+        width: 55%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        /* position: relative;
+        left: 23%; */
+    }
+    .cart-position{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .input-width{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .input-width-cart{
+        width: 50%;
+        margin-bottom: 20px;
+        position: relative;
+        left: 25%;
+    }
+	#topnav-logo{
+        margin-top: 10px;
+        margin-bottom: 25px;
+        width: 100px;
+    }
+    .topnav-position{
+        position: fixed
+    }
+    .ex-to-sm{
+        width: 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .rek-koran{
+        width: 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .sosmed-footer{
+        width: 50%;
+        margin-left: 19px;
+        margin-top:10px;
+    }
+    .license-footer{
+        width: 212px;
+        float: right;
+        margin-top: -25px;
+        margin-right: 20px;
+    }
+    .img-gallery-blog{
+        width: 44.5%;
+        margin: 15px;
+        float: left;
+    }
+    .img-fit-cover{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+        left: 50%;
+    position: relative;
+    }
+    .img-fit-cover-shop{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .img-shop{
+        margin-bottom: 50px;
+    }
+    .title-cart{
+        position: relative;
+    left: 20%;
+    font-size: 17px;
+    margin-top: 20px;
+    }
+    /* .div-gallery-blog{
+        width: 323.5px;
+        height: 215.66px;
+    } */
+    .button-circle {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        margin-top: 65px;
+      }
+      .button-circle-form {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+        margin: 10px -40px;
+        left: 50%;
+      }
+      .button-circle-cart {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+        margin: 10px -40px;
+        left: 50%;
+      }
+      .button-circle-little {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        width: 27px;
+        height:27px;
+        border-radius: 100%;
+        position: relative;
+        margin-top: 50px;
+        left: 20%;
+      }
+      .backrounded{
+        width: 180px;
+        position: relative;
+        left: 15%;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+      padding-top: 5px;
+      padding-left: 15px;
+    }
+    .text-center{
+        text-align: center;
+        /* font-size: 16px; */
+        padding-top: 2px;
+    }
+}
+
+/* small */
+@media (min-width: 768px) and (max-width: 991px) {
+    .line-contact{
+        width: 100% !important;
+        border-top: 1px solid gainsboro !important;
+    }
+    .padding-about{
+        padding-top: 11%;
+        margin-bottom: 50px;
+        font-size:20px !important;
+        line-height: 35px;
+    }
+    .padding-top{
+        padding-top: 18%;
+        margin-bottom: 50px;
+        font-size:20px !important;
+        line-height: 25px;
+    }
+    .img-jumbo{
+        left: 100px;
+        display: block;
+        margin-left: -40px;
+        width: 111.3%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .hr-aset{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 68%;
+    }
+    .content-aset{
+        width: 100%;
+        position: relative;
+        left: 23%;
+        border-radius: 7px;
+        height: 30px;
+        color: black;
+        padding-top: 2.5px;
+        padding-left: 25px;
+        font-weight: 500;
+    }
+    .title-aset{
+        width: 79%;
+        position: relative;
+        left: 9.5%;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+        padding-top: 2.5px;
+        padding-left: 25px;
+    }
+    .chart-arus-ikhtisar{
+        width: 70%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-pie-ikhtisar{
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-tabel-ikhtisar{
+        width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .chart-img-donasi{
+        margin-top: 50px;
+        width: 450px;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .jenis-content{
+        padding-left:80px;
+    }
+    .ukuran-content{
+        padding-left:62px;
+    }
+    .detail-content{
+        padding-left:70px;
+    }
+    .pengiriman-content{
+        padding-left:10px;
+    }
+    .del-cart{
+        margin-top:20px;
+        font-weight:500;
+    }
+    .subtotal{
+        text-align:right;
+        margin-bottom:50px;
+        padding-right:30px;
+        font-weight: 500;
+        font-size:16px;
+    }
+    .img-cart{
+        width: 75%;
+        /* left: 13%;
+        position: relative; */
+    }
+    .article-content-cart{
+
+        margin-bottom: 7px;
+
+    }
+    .input-width{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .input-width-cart{
+        width: 50%;
+        margin-bottom: 20px;
+        position: relative;
+        left: 25%;
+    }
+    .tab-bca-account{
+        margin-top: 30px;
+        margin-bottom: 80px;
+    }
+    .cart-position{
+
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+ /*=============================================================================================*/
+  /* NAVBAR */
+    #navbar-custom { display: inline-block; width: 100%; }
+    #navbar-custom ul {
+        display: table;
+        width: 100%;
+    }
+
+    #navbar-custom li {
+        /* display: table-cell;
+        width: 16.6%;
+        text-align: center;
+        vertical-align: middle; */
+    }
+    #topnav-logo{
+        width: 80px;
+    }
+    .center-div{
+        text-align: center;
+      }
+      .sosmed-footer{
+        width: 69px;
+        float: right;
+        margin-right: 50px;
+        margin-top:-2px;
+    }
+    .license-footer{
+        float: right;
+        margin-right: 19px;
+    }
+    .img-gallery-blog{
+        width: 29.1%;
+        margin: 15px;
+        float: left;
+    }
+    .img-fit-cover{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .img-fit-cover-shop{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .img-shop{
+        margin-bottom: 50px;
+    }
+    .title-cart{
+        position: relative;
+    left: 20%;
+    font-size: 17px;
+    margin-top: 20px;
+    }
+    /* .div-gallery-blog{
+        width: 206.61px;
+        height: 137.73px;
+    } */
+    .button-circle {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width:100px;
+        height:100px;
+        border-radius: 100%;
+        margin-top: 65px;
+      }
+      .button-circle-form {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 60px;
+
+      }
+      .button-circle-cart {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+        margin: 10px -40px;
+        left: 50%;
+      }
+      .button-circle-little {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        width: 27px;
+        height:27px;
+        border-radius: 100%;
+        position: relative;
+        margin-top: 50px;
+        left: 20%;
+      }
+      .backrounded{
+        width: 60%;
+        position: relative;
+        left: 30%;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+      padding-top: 5px;
+      padding-left: 15px;
+    }
+    .text-center{
+        text-align: center;
+        /* font-size: 16px; */
+        padding-top: 2px;
+    }
+      .hidden-sm-to-xs{display:none!important}
+}
+/* medium */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .line-contact{
+        width: 153% !important;
+        border-top: 1px solid gainsboro !important;
+    }
+    .padding-about{
+        padding-top: 12%;
+        margin-bottom: 50px;
+        font-size:30px !important;
+        line-height: 35px;
+    }
+    .padding-top{
+        padding-top: 20%;
+        margin-bottom: 50px;
+        font-size:25px !important;
+        line-height: 30px;
+    }
+    .img-jumbo{
+        left: 100px;
+        display: block;
+        margin-left: -45.6px;
+        width: 109.3%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .hr-aset{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 65%;
+    }
+    .content-aset{
+        width: 50%;
+        position: relative;
+        left: 30%;
+        border-radius: 7px;
+        height: 30px;
+        color: black;
+        padding-top: 2.5px;
+        padding-left: 25px;
+        font-weight: 500;
+    }
+    .title-aset{
+        width: 70%;
+        position: relative;
+        left: 14.5%;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+        padding-top: 2.5px;
+        padding-left: 25px;
+    }
+    .chart-arus-ikhtisar{
+        width: 75%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-pie-ikhtisar{
+        width: 45%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-tabel-ikhtisar{
+        width: 90%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-img-donasi{
+        margin-top: 50px;
+        width: 500px;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .jenis-content{
+        padding-left:80px;
+    }
+    .ukuran-content{
+        padding-left:62px;
+    }
+    .detail-content{
+        padding-left:70px;
+    }
+    .pengiriman-content{
+        padding-left:10px;
+    }
+    .del-cart{
+        margin-top:20px;
+        font-weight:500;
+    }
+    .subtotal{
+        text-align:right;
+        margin-bottom:50px;
+        padding-right:30px;
+        font-weight: 500;
+        font-size:16px;
+    }
+    .img-cart{
+        width: 75%;
+        /* left: 13%;
+        position: relative; */
+    }
+    .article-content-cart{
+
+        margin-bottom: 7px;
+
+    }
+    .bca-account{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .input-width{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .input-width-cart{
+        width: 40%;
+        margin-bottom: 20px;
+        position: relative;
+        left: 30%;
+    }
+	#topnav-logo{
+        width: 80px;
+    }
+    .sosmed-footer{
+        width: 69px;
+        float: right;
+        margin-right: 280px;
+        margin-top:-2px;
+    }
+    .license-footer{
+        float: right;
+        margin-right: 19px;
+    }
+    .img-gallery-blog{
+        width: 30.1%;
+        margin: 15px;
+        float: left;
+    }
+    .img-fit-cover{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .img-fit-cover-shop{
+        margin-top: 50px;
+        width: 648px;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .img-shop{
+        margin-bottom: 50px;
+    }
+    .title-cart{
+        position: relative;
+    left: 26%;
+    font-size: 18px;
+    margin-top: 20px;
+    }
+    /* .div-gallery-blog{
+        width: 279.92px;
+        height: 186.61px;
+    } */
+    .button-circle {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width:100px;
+        height:100px;
+        border-radius: 100%;
+        margin-top: 65px;
+      }
+      .button-circle-form {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 98px;
+
+      }
+      .button-circle-cart {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+        margin: 10px -40px;
+        left: 50%;
+      }
+      .button-circle-little {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        width: 27px;
+        height:27px;
+        border-radius: 100%;
+        position: relative;
+        margin-top: 50px;
+        left: 26%;
+      }
+      .backrounded{
+        width: 45%;
+        position: relative;
+        left: 30%;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+      padding-top: 5px;
+      padding-left: 15px;
+    }
+    .text-center{
+        text-align: center;
+        /* font-size: 16px; */
+        padding-top: 2px;
+    }
+}
+
+/* large */
+@media (min-width: 1200px) {
+    .line-contact{
+        width: 153% !important;
+        border-top: 1px solid gainsboro !important;
+    }
+    .padding-about{
+        padding-top: 25px;
+        margin-bottom: 50px;
+        font-size:30px !important;
+        line-height: 35px;
+    }
+    .padding-top{
+        padding-top: 20%;
+        margin-bottom: 50px;
+        font-size:30px !important;
+        line-height: 35px;
+    }
+    .img-jumbo{
+        display: block;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .hr-aset{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 65%;
+    }
+    .content-aset{
+        width: 50%;
+        position: relative;
+        left: 30%;
+        border-radius: 7px;
+        height: 30px;
+        color: black;
+        padding-top: 2.5px;
+        padding-left: 25px;
+        font-weight: 500;
+    }
+    .title-aset{
+        width: 70%;
+        position: relative;
+        left: 14.5%;
+        border-radius: 7px;
+        height: 30px;
+        color: white;
+        padding-top: 2.5px;
+        padding-left: 25px;
+    }
+    .chart-arus-ikhtisar{
+        width: 70%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-pie-ikhtisar{
+        width: 35%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-tabel-ikhtisar{
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .chart-img-donasi{
+        margin-top: 50px;
+        width: 550px;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .jenis-content{
+        padding-left:80px;
+    }
+    .ukuran-content{
+        padding-left:62px;
+    }
+    .detail-content{
+        padding-left:70px;
+    }
+    .pengiriman-content{
+        padding-left:10px;
+    }
+    .del-cart{
+        margin-top:20px;
+        font-weight:500;
+    }
+    .subtotal{
+        text-align:right;
+        margin-bottom:75px;
+        padding-right:30px;
+        font-weight: 500;
+        font-size:17px;
+    }
+    .img-cart{
+        width: 75%;
+        /* left: 13%;
+        position: relative; */
+    }
+    .article-content-cart{
+
+        margin-bottom: 7px;
+
+    }
+
+    .bca-account{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .input-width{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .input-width-cart{
+        width: 35%;
+        margin-bottom: 20px;
+        position: relative;
+        left: 33%;
+    }
+	#topnav-logo{
+        width: 60px;
+    }
+    .sosmed-footer{
+        width: 69px;
+        float: right;
+        margin-right: 480px;
+        margin-top:-2px;
+    }
+    .license-footer{
+        float: right;
+        margin-right: 19px;
+    }
+    .img-gallery-blog{
+        width: 30.6%;
+        margin: 15px;
+        float: left;
+    }
+    .img-fit-cover{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .img-fit-cover-shop{
+        margin-top: 50px;
+        width: 648px;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .img-shop{
+        margin-bottom: 50px;
+    }
+    /* .div-gallery-blog{
+        width: 345.77px;
+        height: 230.5px;
+    } */
+    .title-cart{
+        position: relative;
+    left: 30%;
+    font-size: 18px;
+    margin-top: 20px;
+    }
+    .button-circle {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width:100px;
+        height:100px;
+        border-radius: 100%;
+        margin-top: 65px;
+      }
+      .button-circle-form {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 130px;
+
+      }
+      .button-circle-cart {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        width:75px;
+        height:75px;
+        border-radius: 100%;
+        position: relative;
+        margin: 10px -40px;
+        left: 50%;
+      }
+      .button-circle-little {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        width: 27px;
+        height:27px;
+        border-radius: 100%;
+        position: relative;
+        margin-top: 50px;
+        left: 30%;
+      }
+      .backrounded{
+          width: 38%;
+          position: relative;
+          left: 30%;
+          border-radius: 7px;
+          height: 30px;
+          color: white;
+        padding-top: 5px;
+        padding-left: 15px;
+      }
+      .text-center{
+        text-align: center;
+        /* font-size: 16px; */
+        padding-top: 2px;
+    }
+
+
+}
+
+ /*=============================================================================================*/
+/* REFACT */
+@media (max-width: 767px){
+  ul.nav.navbar-nav li.right {
+    float: left !important;
+  }
+}

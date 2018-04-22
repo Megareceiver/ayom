@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayom</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/ayomlogo.png">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body>
+    <div class="container">
+<!-- Header -->
+        <header class="parent"></header>
+<!-- END Header -->
+<!-- Main -->
+        <main class="parent">
+            <div class="blog-article article-blog article-title" id="head-about">
+                <p class="gillsans-22 tab-article">TENTANG KAMI</p>
+            </div>
+            <div class="clearfix"></div>
+
+            <section id="founder-about" style="background-color:#dddddd; padding-bottom: 40px; margin: 40px 0;">
+              <div class="head-section">
+                  <p class="gillsans-30-404" style="text-align:center; margin-top:100px; padding-top:80px; margin-bottom:70px;">PARA PENDIRI</p>
+              </div>
+            </section>
+            <div id="contact-about" class="col-md-8 col-md-offset-2 padding-about">
+                <p class="gillsans-bold tab-article head-section">HUBUNGI KAMI</p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="article-title-box" style="margin-bottom:30px; padding-top:50px;"><p class="gillsans-20">BERBICARA PADA KAMI</p></div>
+              <form id="syncrom" f-group="operation" f-target="talk_to_us">
+                <div class="input-group input-width-cart">
+                    <input type="text" name="name" class="form-control input-default-form gillsans" placeholder="Nama">
+                </div>
+                <div class="input-group input-width-cart">
+                    <input type="text" name="email" class="form-control input-default-form gillsans" placeholder="Email">
+                </div>
+                <div class="input-group input-width-cart">
+                    <input type="text" name="phone" class="form-control input-default-form gillsans" placeholder="Nomor Mobile">
+                </div>
+                <div class="input-group input-width-cart">
+                     <textarea type="text" name="message" class="form-control input-default-form gillsans" placeholder="Pesan" rows="10" cols="37" style="resize:none;"></textarea>
+                </div>
+                <button type="submit" class="button-circle-cart btn-equipment gillsans" style="margin-bottom:50px;">KIRIM</button>
+              </form>
+            <div class="clearfix"></div>
+        </main>
+<!-- END Main -->
+<!-- Footer -->
+        <footer class="parent" style="margin-bottom:30px;"></footer>
+<!-- END Footer -->
+    </div>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../assets/js/public.js"></script>
+    <script src="../assets/js/partial.js"></script>
+    <script>
+      $(function(){
+        story();
+        founder();
+        contact();
+        p_formHandler('syncrom', 'addData', 'about.html', 'yes');
+      });
+
+      function story(){
+        var story_inner      = "";
+
+        var dumb = p_getData('operation', 'about_story');
+        var story = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+        for(var loop=0; loop<story.length; loop++){
+          if(story[loop].picture != ""){
+            story_inner = story_inner +
+            '<div class="row">' +
+                '<div class="col-md-12 jumbo-tron">' +
+                    '<img src="../assets/about/story/' + story[loop].picture + '" width="100%" class="img-responsive" style="margin-top:25px; margin-bottom:25px;" />' +
+                '</div>' +
+            '</div>';
+          }
+
+          if(story[loop].description != ""){
+            story_inner = story_inner + '<p class="gillsans-12-5 text-color-content">' + story[loop].description + '</p>';
+          }
+		    }
+
+       $("#head-about + .clearfix").after(story_inner);
+      }
+
+      function founder(){
+        var founder_inner = "";
+
+        var dumb = p_getData('operation', 'about_founder');
+        var founder = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+        for(var loop=0; loop<founder.length; loop++){
+          founder_inner = founder_inner +
+          '<div>' +
+            '<div class="col-md-3 col-md-offset-2"><img src="../assets/about/founder/' + founder[loop].picture + '" class="img-fit-cover img-shop tab-donate"></div>' +
+            '<div class="col-md-5 padding-about">' +
+              '<p class="gillsans-bold tab-article">' + founder[loop].name + '</p>' +
+              '<p class="gillsans-content tab-article text-color-content">' + founder[loop].description + '</p>' +
+            '</div>' +
+            '<div class="clearfix"></div>' +
+          '</div>';
+		    }
+
+        founder_inner = founder_inner + '<div class="clearfix"></div>';
+
+       $("#founder-about .head-section").after(founder_inner);
+      }
+
+      function contact(){
+        var contact_inner = "";
+
+        var dumb    = p_getData('operation', 'about_contact');
+        var contact = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+        for(var loop=0; loop<contact.length; loop++){
+
+          if(contact[loop].name != "")
+          contact_inner = contact_inner + '<p class="gillsans-content text-color-content" style="margin-bottom:3px;">' + contact[loop].name + '</p>';
+          if(contact[loop].address != "")
+          contact_inner = contact_inner + '<p class="gillsans-content text-color-content" style="margin-bottom:3px;">' + contact[loop].address + '</p>';
+          if(contact[loop].phone != "")
+          contact_inner = contact_inner + '<p class="gillsans-content text-color-content" style="margin-bottom:3px;">' + contact[loop].phone + '</p>';
+
+          contact_inner = contact_inner + '<p class="gillsans-content text-color-content" style="margin-bottom:10px;">&nbsp;</p>';
+		    }
+
+        contact_inner = contact_inner + '<div class="clearfix"></div>';
+
+       $("#contact-about .head-section").after(contact_inner);
+      }
+    </script>
+</body>
+</html>

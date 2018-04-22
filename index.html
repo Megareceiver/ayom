@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayom</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/ayomlogo.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <div class="container">
+      <!-- Header -->
+      <header class="parent"></header>
+      <!-- END Header -->
+
+      <!-- Main -->
+        <main class="parent">
+            <div class="row">
+                <div class="col-md-12 jumbo-tron">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+        							  <!-- Indicators -->
+        							  <ol class="carousel-indicators"></ol>
+
+        							  <!-- Wrapper for slides -->
+        							  <div class="carousel-inner"></div>
+        					</div>
+                </div>
+            </div>
+            <div class="article gillsans" id="donate-caption">
+              <div class="article-title">
+                  <p class="gillsans-15">DONASI</p>
+                  <p class="article-subtitle gillsans-19 subtitle"></p>
+              </div>
+              <div class="article-content gillsans-content"><p class="description"></p></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row gallery-position" id="donate-group"></div>
+            <div class="clearfix"></div>
+        </main>
+<!-- END Main -->
+      <!-- Footer -->
+        <footer class="parent" style="margin-bottom:30px;"></footer>
+        <!-- END Footer -->
+    </div>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/public.js"></script>
+    <script src="assets/js/partial.js"></script>
+    <script>
+      $(function(){
+        carousel();
+        donate_group();
+      });
+
+      function carousel(){
+        var carousel_inner      = "";
+        var carousel_indicators = "";
+        var carousel_navigator  = "";
+
+        var dumb = p_getData('operation', 'home_carousel');
+        var carousel = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+        for(var loop=0; loop<carousel.length; loop++){
+          if(carousel.length > 1)
+				  carousel_indicators = carousel_indicators + '<li data-target="#myCarousel" data-slide-to="' + loop + '" class="' + ((loop == 0) ? 'active' : '') + '"></li>';
+
+          carousel_inner      = carousel_inner +
+  				'<div class="item ' + ((loop == 0) ? 'active' : '') + '">' +
+			      '<img src="assets/home/carousel/' + carousel[loop].picture + '" alt="Ayom Indonesia">' +
+			      '<div class="carousel-caption">' +
+			        '<h3>' + ((carousel[loop].title != "") ? carousel[loop].title : '') + '</h3>' +
+			        '<p>' + ((carousel[loop].description != "") ? carousel[loop].description : '') + '</p>' +
+			      '</div>' +
+			    '</div>';
+		    }
+
+        if(carousel.length > 1) {
+          carousel_navigator = carousel_navigator +
+          '<a class="left carousel-control" href="#myCarousel" data-slide="prev">' +
+            '<span class="glyphicon glyphicon-chevron-left"></span>' +
+            '<span class="sr-only">Previous</span>' +
+          '</a>' +
+          '<a class="right carousel-control" href="#myCarousel" data-slide="next">' +
+            '<span class="glyphicon glyphicon-chevron-right"></span>' +
+            '<span class="sr-only">Next</span>' +
+          '</a>';
+        }
+
+
+       $("#myCarousel .carousel-inner").html(carousel_inner);
+       $("#myCarousel .carousel-inner").after(carousel_navigator);
+       $("#myCarousel .carousel-indicators").html(carousel_indicators);
+      }
+
+      function donate_group(){
+        var dumb           = p_getData('operation', 'home_donate_headFetch');
+        var donate_caption = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+        var dumb         = p_getData('operation', 'home_donate');
+        var donate_group = (dumb.feedData != undefined) ? dumb.feedData : [];
+        var donate_inner = "";
+
+        for(var loop=0; loop<donate_group.length; loop++){
+          donate_inner = donate_inner +
+          '<div class="col-md-3 col-sm-6 col-xs-12 ex-to-sm">' +
+            '<a href="' + donate_group[loop].link + '">' +
+              '<div class="article-box" style="background-image: url(assets/home/donate/' + donate_group[loop].picture + '); background-size: cover;"></div>' +
+              '<div class="article-title-box">' +
+                  '<p class="gillsans-18">' + donate_group[loop].title + '</p>' +
+              '</div>' +
+              '<div class="article-content-box gillsans-content">' +
+                  '<p>' + donate_group[loop].description + '</p>' +
+              '</div>' +
+            '</a>' +
+          '</div>';
+        }
+
+        $("#donate-caption .subtitle").html(donate_caption.subtitle);
+        $("#donate-caption .description").html(donate_caption.description);
+        $("#donate-group").html(donate_inner);
+      }
+    </script>
+</body>
+</html>

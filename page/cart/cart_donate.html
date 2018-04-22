@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayom</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/ayomlogo.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+</head>
+<body>
+    <div class="container">
+<!-- Header -->
+        <header class="parent"></header>
+<!-- END Header -->
+<!-- Main -->
+        <main class="parent">
+
+    <!-- Main Tab-->
+            <div class="tab gillsans-15">
+                <button class="tab-equipment" onclick="location.href='../donate/donate_equipment.html'">EQUIPMENT</button>
+                <button class="tab-food" onclick="location.href='../donate/donate_food.html'">FOOD</button>
+                <button class="tab-medical" onclick="location.href='../donate/donate_medical.html'">MEDICAL</button>
+                <button class="tab-money" onclick="location.href='../donate/donate_money.html'">MONEY</button>
+            </div>
+            <hr class="tab-hr">
+    <!-- Main Content-->
+
+            <div id="Equipment" class="tabcontent1 city">
+                <div class="">
+                    <p class="gillsans-22">KERANJANG DONASI</p>
+                </div>
+                <div class="clearfix"></div>
+                <section id="item-list">
+                  <div class="col-md-5 col-sm-5 bca-account img-center cart-position" ><img src="../../assets/img/gallery/petcargo1.jpg" class="img-cart"></div>
+                  <div class="col-md-7 col-sm-7 bca-account cart-position">
+                      <div class="input-group " style="margin-top:30px;">
+                          <p class="gillsans-content text-color-content article-content-cart">Jenis<span class="jenis-content">: Woodwork</span></p>
+                          <p class="gillsans-content text-color-content article-content-cart">Ukuran<span class="ukuran-content">: painting, electrical,</span></p>
+                          <p class="gillsans-content text-color-content article-content-cart">Detail<span class="detail-content">: plumbing, and more. My service might be varied, but they all come with with the some promise of quality, dedication, and durability.</span></p>
+                          <p class="gillsans-content text-color-content article-content-cart">Jenis Pengiriman<span class="pengiriman-content">: Licensed and insured, I'm</span></p>
+                          <a href=""><p class="gillsans-content text-color-content article-content-cart del-cart"><i>Hapus</i></p></a>
+                      </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                  <div class="col-md-5 col-sm-5 bca-account img-center cart-position" ><img src="../../assets/img/gallery/cage.jpeg" class="img-cart"></div>
+                  <div class="col-md-7 col-sm-7 bca-account cart-position">
+                      <div class="input-group " style="margin-top:30px;">
+                          <p class="gillsans-content text-color-content article-content-cart">Jenis<span class="jenis-content">: Woodwork</span></p>
+                          <p class="gillsans-content text-color-content article-content-cart">Ukuran<span class="ukuran-content">: painting, electrical,</span></p>
+                          <p class="gillsans-content text-color-content article-content-cart">Detail<span class="detail-content">: plumbing, and more. My service might be varied, but they all come with with the some promise of quality, dedication, and durability.</span></p>
+                          <p class="gillsans-content text-color-content article-content-cart">Jenis Pengiriman<span class="pengiriman-content"s>: Licensed and insured, I'm</span></p>
+                          <a href=""><p class="gillsans-content text-color-content article-content-cart del-cart"><i>Hapus</i></p></a>
+                      </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                </section>
+                <p class="gillsans subtotal">Subtotal (0 item) : Rp. 0</p>
+                <div class="clearfix"></div>
+                <div id="form-donate" class="col-lg-12 col-md-12 col-sm-12">
+                    <p class="gillsans-15 tab-article title-cart">Please complete this form to complete your donation</p>
+                    <div class="input-group input-width-cart">
+                        <input type="text" name="name" class="form-control input-default-form gillsans" placeholder="Nama">
+                    </div>
+                    <div class="input-group input-width-cart">
+                        <input type="text" name="email" class="form-control input-default-form gillsans" placeholder="Email">
+                    </div>
+                    <div class="input-group input-width-cart">
+                        <input type="text" name="phone" class="form-control input-default-form gillsans" placeholder="Nomor Mobile">
+                    </div>
+                    <div class="input-group input-width-cart">
+                        <textarea type="text" name="message" class="form-control input-default-form gillsans" placeholder="Pesan" rows="10" cols="37" style="resize:none;"></textarea>
+                    </div>
+                    <div class="input-group input-width-cart">
+                        <input type="checkbox" name="agreement_check" class=" gillsans" value="1">
+                        <span class="gillsans-12 check-left">Saya sudah membaca <i><a href="#" id="item-policies" target="_blank"><b>Syarat dan Ketentuan</b></a></i> yang berlaku</span>
+                    </div>
+                    <button type="button" onclick="donate_now()" class="button-circle-cart btn-equipment gillsans" style="margin-bottom:20px;">CHECK OUT</button>
+                </div>
+            </div>
+
+            <div id="Sewa" class="tabcontent1 city display-none">
+                <p class="gillsans-30-404 tab-article">Oops!</p>
+                <p class="gillsans-20-404 tab-article">This page is not available yet.</p>
+            </div>
+
+            <div id="Transportasi" class="tabcontent1 city display-none">
+
+            </div>
+            <div class="clearfix"></div>
+        </main>
+<!-- END Main -->
+<!-- Footer -->
+        <footer class="parent" style="margin-bottom:30px;"></footer>
+<!-- END Footer -->
+    </div>
+    <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script>
+        function openCity(cityName) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
+        }
+    </script>
+    <script src="../../assets/js/public.js"></script>
+    <script src="../../assets/js/partial.js"></script>
+    <script>
+      $(function(){
+        donate_();
+      });
+
+      function donate_(){
+
+        var item_cart      = (r_getCookie('ayom_donate_cart') != undefined && r_getCookie('ayom_donate_cart') != "") ? r_getCookie('ayom_donate_cart') : "";
+            item_cart      = (item_cart != "") ? JSON.parse(item_cart) : "";
+
+        var item_container = "";
+        var total          = 0;
+
+        if(item_cart != ""){
+          for(var loop=0; loop<item_cart.length; loop++){
+            item   = "";
+            source = "";
+
+            if(item_cart[loop].product_type == "equipment") source = 'product_equipmentFetch';
+            if(item_cart[loop].product_type == "foods") source = 'product_foodsFetch';
+            if(item_cart[loop].product_type == "medical") source = 'product_medicalFetch';
+
+            if(source != ""){
+              dumb = p_getData('operation', source, '', 'id_data = "' + item_cart[loop].product_id + '"');
+              item = (dumb.feedData != undefined) ? dumb.feedData : "";
+            }
+
+            if(item != ""){
+              picture = "../../assets/img/dog2.gif";
+              if(item.picture != "" && item.picture != undefined) picture = "../../assets/product/" + item_cart[loop].product_type + "/" + item.picture;
+
+              item_container = item_container +
+              '<div class="col-md-5 col-sm-5 bca-account img-center cart-position" ><img src="' + picture + '" class="img-cart"></div>' +
+              '<div class="col-md-7 col-sm-7 bca-account cart-position">' +
+                  '<div class="input-group " style="margin-top:30px;">' +
+                      '<p class="gillsans-content text-color-content article-content-cart">Jenis<span class="jenis-content">: ' + item.type + '</span></p>' +
+                      '<p class="gillsans-content text-color-content article-content-cart">Ukuran<span class="ukuran-content">: ' + item.size + '</span></p>' +
+                      '<p class="gillsans-content text-color-content article-content-cart">Detail<span class="detail-content">: ' + item.detail + '</span></p>' +
+                      '<p class="gillsans-content text-color-content article-content-cart">Jenis Pengiriman<span class="pengiriman-content">: ' + item.shipment + '</span></p>' +
+                      '<a href="#" delete-index="' + loop + '"><p class="gillsans-content text-color-content article-content-cart del-cart"><i>Hapus</i></p></a>' +
+                  '</div>' +
+              '</div>' +
+              '<div class="clearfix"></div>' +
+              '<hr>';
+
+              total = total + parseInt(item.price);
+            }
+          }
+        }else{
+          item_container = '<p>Keranjang kosong!</p>';
+          $("#form-donate, p.subtotal").remove();
+        }
+
+        $("#item-list").html(item_container);
+
+        items = (item_cart.length <= 1) ? item_cart.length + " item": item_cart.length + " items";
+        total = currencyFormatChanger_static(String(total));
+        $("p.subtotal").html('Subtotal (' + items + ') : Rp. ' + total);
+
+        $("[delete-index]").on("click", function(){
+          index = parseInt($(this).attr('delete-index'));
+          dumb  = r_getCookie('ayom_donate_cart');
+          dumb = JSON.parse(dumb);
+          if(dumb.length == 1){
+            dumb = "";
+          }else{
+            dumb.splice(index, 1);
+            dumb = JSON.stringify(dumb);
+          }
+
+          r_setCookie('ayom_donate_cart', dumb);
+          if(dumb == "") r_setCookie('ayom_USER_CART_STATUS', "");
+          location.reload();
+        });
+
+
+        var dumb      = p_getData('support', 'systemFetch');
+        var system   = (dumb.feedData != undefined) ? dumb.feedData : "";
+
+        $("#item-policies").attr('href', '../../assets/system/' + system.item_policies);
+
+      }
+
+      function donate_now(){
+        error = 0;
+        if($("#form-donate [name=name]").val() == "") error = 1;
+        if($("#form-donate [name=email]").val() == "") error = 1;
+        if($("#form-donate [name=phone]").val() == "") error = 1;
+        if($("#form-donate [name=message]").val() == "") error = 1;
+        if($("#form-donate [name=agreement_check]:checked").length == 0) error = 1;
+
+        if(error == 1) {
+          alert('Please fill in all information!');
+          return false;
+        }
+
+
+        items = r_getCookie('ayom_donate_cart');
+        items = JSON.parse(items);
+
+        param = {
+					"name" 					 : $("#form-donate [name=name]").val(),
+					"email" 			   : $("#form-donate [name=email]").val(),
+					"phone" 				 : $("#form-donate [name=phone]").val(),
+					"message" 			 : $("#form-donate [name=message]").val(),
+					"agreement_check": $("#form-donate [name=agreement_check]:checked").length,
+					"items"					 : items
+				};
+
+				$.ajax({
+					url: base_url + "/data/router.php?session=addData&group=operation&target=donation",
+					type: 'post',
+					dataType: 'json',
+					async: false,
+					data: param,
+					success: function(result){
+						if(result.feedStatus == "success") {
+              r_setCookie('ayom_donate_cart', "");
+              r_setCookie('ayom_USER_CART_STATUS', "");
+              window.location = "../thank_you.html";
+						}
+					},
+					complete: function(xhr,status) {  },
+					error: function(xhr,status,error) { console.log(xhr); }
+				});
+      }
+    </script>
+</body>
+</html>

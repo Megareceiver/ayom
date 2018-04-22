@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayom</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/ayomlogo.png">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="parent"></header>
+        <!-- END Header -->
+        <!-- Main -->
+        <main class="parent">
+          <div class="blog-article article-blog article-title">
+              <p class="gillsans-22 tab-article">DONASI</p>
+          </div>
+          <div class="article-title">
+              <p class="article-subtitle gillsans-19 head-subtitle"></p>
+          </div>
+          <div class="article-content gillsans-content">
+              <p class="head-description"></p>
+          </div>
+          <!-- Main Tab-->
+            <div id="donate-navigator" class="tab gillsans-15">
+              <!-- <button class="tab-equipment" onclick="openCity('Equipment')">EQUIPMENT</button>
+              <button class="tab-food" onclick="openCity('Food')">FOOD</button>
+              <button class="tab-medical" onclick="openCity('Medical')">MEDICAL</button>
+              <button class="tab-money" onclick="openCity('Money')">MONEY</button> -->
+            </div>
+            <hr class="tab-hr">
+            <section id="donate-content">
+              <!-- <div id="Equipment" class="tabcontent1 city">
+                  <p class="gillsans-22 tab-article">EQUIPMENT</p>
+                  <p class="gillsans-content text-color-content">Woodwork, painting, elictrical, plumbing, and more. My service might be varied, but they all come with with the some promise of quality, dedication, and durability. Licensed and insured, I'm experienced contractor with knowledge passed down from generations. I can offer a I-year guarantee for all my service, along with free estimates. My service might be varied, but they all come with with the some promise of quality, dedication, and durability. Licensed and insured, I'm experienced contractor with knowledge passed down from generations. I can offer a I-year guarantee for all my service, along with free estimates.</p>
+                  <p class="gillsans-content text-color-content">Woodwork, painting, elictrical, plumbing, and more. My service might be varied, but they all come with with the some promise of quality, dedication, and durability. Licensed and insured, I'm experienced contractor with knowledge passed down from generations. I can offer a I-year guarantee for all my service, along with free estimates.</p>
+                  <img src="../../assets/img/petcargo1.jpg" class="img-fit-cover-shop">
+                  <center><button class="button-circle btn-equipment gillsans" type="button" onclick="location.href='donateEquipment.html'">DONATE</button></center>
+              </div>
+              <div id="Food" class="tabcontent1 city" style="display:none">
+                  <p class="gillsans-22 tab-article">FOOD</p>
+                  <p class="gillsans-content text-color-content">Woodwork, painting, elictrical, plumbing, and more. My service might be varied, but they all come with with the some promise of quality, dedication, and durability. Licensed and insured, I'm experienced contractor with knowledge passed down from generations. I can offer a I-year guarantee for all my service, along with free estimates. My service might be varied, but they all come with with the some promise of quality, dedication, and durability. Licensed and insured,</p>
+                  <img src="../../assets/img/food.jpg" class="img-fit-cover-shop">
+                  <center><button class="button-circle btn-food gillsans" onclick="location.href='donateFood.html'">DONATE</button></center>
+              </div>
+              <div id="Medical" class="tabcontent1 city" style="display:none">
+                  <p class="gillsans-22 tab-article">MEDICAL</p>
+                  <p class="gillsans-content text-color-content">Woodwork, painting, elictrical, plumbing, and more. My service might be varied, but they all come with with the some promise of quality, dedication, and durability. Licensed and insured, I'm experienced contractor with knowledge passed down from generations. I can offer a I-year guarantee for all my service, along with free estimates. My service might be varied, but they all come with with the some promise of quality, dedication, and durability. Licensed and insured, I'm experienced contractor with knowledge passed down from generations. I can offer a I-year guarantee for all my service, along with free estimates.</p>
+                  <p class="gillsans-content text-color-content">Woodwork, painting, elictrical, plumbing, and more. My service might be varied, but they all come with with the some promise of quality, dedication,</p>
+                  <img src="../../assets/img/petcare.jpg" class="img-fit-cover-shop">
+                  <center><button class="button-circle btn-medical gillsans" onclick="location.href='donateMedical.html'">DONATE</button></center>
+              </div>
+              <div id="Money" class="tabcontent1 city" style="display:none">
+                  <p class="gillsans-22 tab-article">MONEY</p>
+                  <p class="gillsans-content text-color-content">Woodwork, painting, elictrical, plumbing, and more. My service might be varied, but they all come with with the some promise of quality, dedication, and durability. Licensed and insured, I'm experienced contractor with knowledge passed down from generations. I can offer a I-year guarantee for all my service, along with free estimates. My service might be varied, but they all come with with the some promise of quality, dedication, and durability. Licensed and insured, I'm experienced contractor with knowledge passed down from generations. I can offer a I-year guarantee for all my service, along with free estimates.</p>
+                  <img src="../../assets/img/thanks.jpg" class="img-fit-cover-shop">
+                  <center><button class="button-circle btn-money gillsans" type="button" onclick="location.href='donateMoney.html'">DONATE</button></center>
+              </div> -->
+              <div class="clearfix"></div>
+            </section>
+        </main>
+<!-- END Main -->
+<!-- Footer -->
+        <footer class="parent" style="margin-bottom:30px;"></footer>
+<!-- END Footer -->
+    </div>
+    <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/partial.js"></script>
+    <script src="../../assets/js/public.js"></script>
+    <script>
+        function openCity(cityName) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
+        }
+
+        $(function(){
+          var dumb           = p_getData('operation', 'home_donate_headFetch');
+          var donate_caption = (dumb.feedData != undefined) ? dumb.feedData : [];
+
+          $(".head-subtitle").html(donate_caption.subtitle);
+          $(".head-description").html(donate_caption.description);
+        });
+    </script>
+
+    <script src="../../assets/js/public.js"></script>
+    <script src="../../assets/js/partial.js"></script>
+    <script>
+      $(function(){
+        donate_group();
+      });
+
+      function donate_group(){
+        var dumb         = p_getData('operation', 'home_donate');
+        var donate_group = (dumb.feedData != undefined) ? dumb.feedData : [];
+        var donate_inner = "";
+        var donate_navigator = "";
+
+        for(var loop=0; loop<donate_group.length; loop++){
+
+          state = (loop > 0) ? 'style="display:none"' : '';
+          donate_inner = donate_inner +
+          '<div id="tab-' + loop + '" class="tabcontent1 city" ' + state + '>' +
+            '<p class="gillsans-22 tab-article">' + donate_group[loop].title.toUpperCase() + '</p>' +
+            '<p class="gillsans-content text-color-content">' + donate_group[loop].description + '</p>' +
+            '<img src="../../assets/home/donate/' + donate_group[loop].picture + '" class="img-fit-cover-shop">' +
+            '<center><button class="button-circle btn-equipment gillsans" type="button" onclick="location.href=\'../../' + donate_group[loop].link + '\'">DONASI</button></center>'+
+          '</div>';
+
+          donate_navigator = donate_navigator + '<button class="tab-' + loop + '" onclick="openCity(\'tab-' + loop + '\')">' + donate_group[loop].title.toUpperCase() + '</button>';
+        }
+
+        $("#donate-content").html(donate_inner);
+        $("#donate-navigator").html(donate_navigator);
+      }
+    </script>
+</body>
+</html>
