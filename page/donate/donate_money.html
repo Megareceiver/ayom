@@ -40,7 +40,7 @@
               <div class="clearfix"></div>
             </section>
             <hr style="margin-top:50px;">
-            <p class="article-subtitle gillsans-19" style="margin-top:30px;margin-bottom:30px;">Summary</p>
+            <p class="article-subtitle gillsans-19" style="margin-top:30px;margin-bottom:30px;">Rekapitulasi</p>
             <section id="cart-container">
 
 
@@ -86,13 +86,15 @@
     <script src="../../assets/js/jquery-3.3.1.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script>
-        function openCity(cityName) {
-        var i;
-        var x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        document.getElementById(cityName).style.display = "block";
+        function openCity(elem, cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+          }
+          document.getElementById(cityName).style.display = "block";
+          $(".btn-tab").removeClass("active");
+          $(elem).addClass("active");
         }
     </script>
     <script src="../../assets/js/public.js"></script>
@@ -113,9 +115,11 @@
         var donate_container = "";
 
         var donate_list = [];
+        var state_ac = "active";
 
         for(var loop=0; loop<donate_type.length; loop++){
-          donate_navigator = donate_navigator + '<button class="tab-blog" onclick="openCity(\'donate-' + loop +'\')">' + donate_type[loop].caption.toUpperCase() + '</button>';
+          donate_navigator = donate_navigator + '<button class="tab-blog ' + state_ac + ' btn-tab" onclick="openCity(this, \'donate-' + loop +'\')">' + donate_type[loop].caption.toUpperCase() + '</button>';
+          state_ac = "";
 
           diff = parseInt(donate_type[loop].target) - parseInt(donate_type[loop].income);
           diff = (diff > 0) ? diff : 0;
@@ -147,7 +151,7 @@
               '<p class="article-subtitle gillsans-19" style="margin-top:30px;">' + donate_type[loop].caption + '</p>' +
               '<p class="gillsans-content text-color-content desc">' + donate_type[loop].description + '</p>' +
               '<div class="clearfix"></div>' +
-              '<p class="article-subtitle gillsans-19" style="margin-top:30px;">Select your amount</p>' +
+              '<p class="article-subtitle gillsans-19" style="margin-top:30px;">Pilih jumlah donasi.</p>' +
               '<div class="col-md-12" style="text-align:center;">' +
                   '<div class="col-md-12" style="width:70%; left:15%;">' +
                       '<button type="button" target-index="' + loop + '" target-caption="' + donate_type[loop].caption + '" target-id="' + donate_type[loop].value + '" target-value="10000" class="button-amount btn-money gillsans">Rp. 10.000</button>' +

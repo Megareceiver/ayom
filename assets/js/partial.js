@@ -98,6 +98,9 @@ function header(){
 }
 
 function footer(){
+	var system = p_getData('support', 'systemFetch');
+			system = system.feedData;
+
 	var html 	 = "";
 
 	var d = new Date();
@@ -122,9 +125,9 @@ function footer(){
 					'</div>' +
 					'<div class="license-footer text-color-footer gillsans-12 hidden-xs">Copyright &copy; 2018 Ayom. All Right Reserved</div>' +
 					'<div class="sosmed-footer text-color-footer gillsans-16">' +
-							'<a href=""><img src="' + base_url + '/assets/img/icon/instagram.png"  style="width:20px;"/></a>' +
-							'<a href=""><img src="' + base_url + '/assets/img/icon/twitter.png"  style="width:20px;"/></a>' +
-							'<a href=""><img src="' + base_url + '/assets/img/icon/facebook.png"  style="width:20px;"/></a>' +
+							'<a href="' + system.instagram + '"><img src="' + base_url + '/assets/img/icon/instagram.png"  style="width:20px;"/></a>' +
+							'<a href="' + system.twitter + '"><img src="' + base_url + '/assets/img/icon/twitter.png"  style="width:20px;"/></a>' +
+							'<a href="' + system.facebook + '"><img src="' + base_url + '/assets/img/icon/facebook.png"  style="width:20px;"/></a>' +
 					'</div>' +
 					'<div class="license-footer text-color-footer gillsans-12 hidden-sm hidden-md hidden-lg">Copyright &copy; 2018 Ayom. All Right Reserved</div>' +
 			'</form>' +

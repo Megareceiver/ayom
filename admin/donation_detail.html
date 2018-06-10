@@ -79,7 +79,9 @@
 					    	'<tr>'+
 									'<th width="10%" class="text-center"><span class="fa fa-picture-o"></span></th>'+
 					        '<th>Product</th>'+
+					        '<th>Size</th>'+
 					        '<th>Category</th>'+
+					        '<th>Shipment</th>'+
 					        '<th>Price</th>'+
 					    	'</tr>'+
 					    '</thead>'+
@@ -152,10 +154,12 @@
 			function dataGenerator(data){
 				var html = ((data.length == 0) ? "<tr><td colspan='5'>No data</td></tr>" : "");
 
+				console.log(data);
 				for(var loop =0; loop<data.length; loop++){
 
 					item   = "";
 					source = "";
+					adds = "";
 
 					if(data[loop].product_type == "equipment") source = 'product_equipmentFetch';
 					if(data[loop].product_type == "foods") source = 'product_foodsFetch';
@@ -166,6 +170,9 @@
 						item = (dumb.feedData != undefined) ? dumb.feedData : "";
 					}
 
+					if(data[loop].product_type == "equipment") item.shipment = data[loop].additional_info;
+					if(data[loop].product_type == "medical") item.size = data[loop].additional_info;
+
 	    		html = html +
 	    		'<tr>'+
 						'<td class="align-center">';
@@ -174,7 +181,9 @@
 						html = html +
 						'</td>'+
 						'<td>'+ item.type +'</td>'+
+	    			'<td>'+ item.size +'</td>'+
 	    			'<td>'+ data[loop].product_type.toUpperCase() +'</td>'+
+	    			'<td>'+ item.shipment +'</td>'+
 	    			'<td>Rp. '+ currencyFormatChanger_static(item.price) +'</td>'+
 	    		'</tr>';
 	    	}

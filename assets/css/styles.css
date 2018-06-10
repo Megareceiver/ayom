@@ -297,6 +297,12 @@ header.parent .cart{
     color: black;
 }
 
+.btn-tab, .btn-tab a { color: rgba(0,0,0,0.4); }
+.btn-tab:hover, .btn-tab.active, .btn-tab:hover a, .btn-tab.active a { color: #766068; font-weight: bold; text-decoration: none; }
+
+.cart-label { width: 120px; display: inline-block; position: absolute; left: 0; }
+.cart-text { display: block; padding-left: 120px; }
+
 /*=============================================================================================*/
 /* ARTICLE */
 .article{
@@ -516,6 +522,10 @@ header.parent .cart{
   .btn-equipment-addcart{
     background-color: #83786b;
   }
+  .btn-equipment-addcart.success{
+    background-color: #5cb85c;
+    font-size: 40px;
+  }
   .btn-equipment{
     background-color: #83786b;
   }
@@ -579,6 +589,15 @@ header.parent .cart{
 }
 .navbar-header #topnav-logo {
   margin-top: 15px;
+}
+
+/*=============================================================================================*/
+/* CUSTOM */
+.detail-box {
+  height: 120px;
+  background: #eee;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
 }
 
 /*=============================================================================================*/
@@ -691,7 +710,7 @@ header.parent .cart{
         margin-bottom: 20px;
     }
     #topnav-logo{
-        width: 80px;
+        width: 50px;
     }
     .topnav-position{
         position: fixed
@@ -911,7 +930,7 @@ header.parent .cart{
         margin-bottom: 20px;
     }
     #topnav-logo{
-        width: 80px;
+        width: 50px;
     }
     .topnav-position{
         position: fixed
@@ -1154,7 +1173,7 @@ header.parent .cart{
         margin-bottom: 20px;
     }
     #topnav-logo{
-        width: 80px;
+        width: 50px;
     }
     .topnav-position{
         position: fixed
@@ -1423,7 +1442,7 @@ header.parent .cart{
 	#topnav-logo{
         margin-top: 10px;
         margin-bottom: 25px;
-        width: 100px;
+        width: 50px;
     }
     .topnav-position{
         position: fixed
@@ -1563,7 +1582,7 @@ header.parent .cart{
         border-top: 1px solid gainsboro !important;
     }
     .padding-about{
-        padding-top: 11%;
+        /* padding-top: 11%; */
         margin-bottom: 50px;
         font-size:20px !important;
         line-height: 35px;
@@ -1705,7 +1724,7 @@ header.parent .cart{
         vertical-align: middle; */
     }
     #topnav-logo{
-        width: 80px;
+        width: 50px;
     }
     .center-div{
         text-align: center;
@@ -1833,7 +1852,7 @@ header.parent .cart{
         border-top: 1px solid gainsboro !important;
     }
     .padding-about{
-        padding-top: 12%;
+        /* padding-top: 12%; */
         margin-bottom: 50px;
         font-size:30px !important;
         line-height: 35px;
@@ -1959,7 +1978,7 @@ header.parent .cart{
         left: 30%;
     }
 	#topnav-logo{
-        width: 80px;
+        width: 50px;
     }
     .sosmed-footer{
         width: 69px;
@@ -2087,7 +2106,7 @@ header.parent .cart{
         border-top: 1px solid gainsboro !important;
     }
     .padding-about{
-        padding-top: 25px;
+        /* padding-top: 25px; */
         margin-bottom: 50px;
         font-size:30px !important;
         line-height: 35px;
@@ -2212,7 +2231,7 @@ header.parent .cart{
         left: 33%;
     }
 	#topnav-logo{
-        width: 60px;
+        width: 50px;
     }
     .sosmed-footer{
         width: 69px;

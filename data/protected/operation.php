@@ -84,7 +84,7 @@
 				case "donation" 			: $resultList = $this->fetchAllRequest('donation', array("id_data", "name", "email", "phone", "message", "acc_owner", "acc_bank", "amount", "acc_number", "acc_reff", "agreement_check", "created_by", "created_date"), $post['keyword'], "ORDER BY id_data ASC", $post['page']); break;
 				case "donationFetch"	: $resultList = $this->fetchSingleRequest('donation', array("id_data", "name", "email", "phone", "message", "acc_owner", "acc_bank", "amount", "acc_number", "acc_reff", "agreement_check"), $post['keyword']); break;
 
-				case "donation_detail" 			: $resultList = $this->fetchAllRequest('donation_detail', array("id_data", "donate_id", "product_id", "product_type", "created_by", "created_date"), $post['keyword'], "ORDER BY id_data ASC", $post['page']); break;
+				case "donation_detail" 			: $resultList = $this->fetchAllRequest('donation_detail', array("id_data", "donate_id", "product_id", "product_type", "additional_info", "created_by", "created_date"), $post['keyword'], "ORDER BY id_data ASC", $post['page']); break;
 				case "donation_detailFetch"	: $resultList = $this->fetchSingleRequest('donation_detail', array("id_data", "donate_id", "product_id", "product_type"), $post['keyword']); break;
 
 				case "donation_money_detail" 			: $resultList = $this->fetchAllRequest('donation_money_detail d JOIN money_category m ON d.money_category_id = m.id_data', array("d.id_data", "d.donate_id", "m.name as category", "d.money_category_id", "d.amount", "d.created_by", "d.created_date"), $post['keyword'], "ORDER BY d.id_data ASC", $post['page']); break;
@@ -408,11 +408,11 @@
 
 					if($resultList["feedStatus"] == "success") {
 						$resultList['resultItem'] = array();
-						$fields = array("donate_id", "product_id", "product_type");
+						$fields = array("donate_id", "product_id", "product_type", "additional_info");
 						$endLoop = count($post['items']);
 						for($loop=0;$loop<$endLoop;$loop++){
 							$item 			= $post['items'][$loop];
-							$values 		= '"'.$resultList["feedId"].'", "'.$item["product_id"].'", "'.$item["product_type"].'"';
+							$values 		= '"'.$resultList["feedId"].'", "'.$item["product_id"].'", "'.$item["product_type"].'", "'.$item["additional_info"].'"';
 							$resultItem = $this->insert('donation_detail', $fields, $values);
 							array_push($resultList['resultItem'], $resultItem);
 						}

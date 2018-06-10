@@ -251,11 +251,11 @@
             if(loop < 9){
               blog_inner = blog_inner +
               '<div class="img-gallery-blog">' +
-                '<a href="blog_detail.html?q=' + blog[loop].id_data + '"><img src="../../assets/blog/' + blog[loop].picture + '" class="img-fit-cover left-0"></a>' +
+                '<a href="blog_detail.html?q=' + blog[loop].id_data + '"><img src="../../assets/blog/' + blog[loop].picture + '" class="img-fit-cover left-0">' +
                 '<div class="article-title-box"><p class="gillsans-18">' + blog[loop].title + '</p></div>' +
                 '<div class="article-content-box gillsans-content">' +
                     '<p>' + blog[loop].description.substring(0, 120) + '...</p>' +
-                '</div>' +
+                '</div></a>' +
               '</div>';
             }
 

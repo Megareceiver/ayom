@@ -13,7 +13,7 @@
 				case "feedback" 				: $resultList = $this->fetchAllRequest('feedback', array("id_data", "name", "email", "category", "subject", "message"), $post['keyword'], "ORDER BY id_data ASC", $post['page']); break;
 				case "feedback_policy" 	: $resultList = $this->fetchAllRequest('feedback_policy', array("id_data", "name", "email", "phone", "title", "page", "paragraph", "message"), $post['keyword'], "ORDER BY id_data ASC", $post['page']); break;
 				case "mailing_list" 		: $resultList = $this->fetchAllRequest('mailing_list', array("id_data", "email"), $post['keyword'], "ORDER BY id_data ASC", $post['page']); break;
-				case "systemFetch" 			: $resultList = $this->fetchSingleRequest('system', array("id_data", "logo", "item_viewer", "food_viewer", "medical_viewer", "acc_owner", "acc_number", "acc_bank", "item_policies", "money_policies"), $post['keyword'], "ORDER BY id_data ASC"); break;
+				case "systemFetch" 			: $resultList = $this->fetchSingleRequest('system', array("id_data", "logo", "item_viewer", "food_viewer", "medical_viewer", "acc_owner", "acc_number", "acc_bank", "item_policies", "money_policies", "instagram", "facebook", "twitter"), $post['keyword'], "ORDER BY id_data ASC"); break;
 				default	   							: $resultList = array( "feedStatus" => "failed", "feedType" => "danger", "feedMessage" => "Something went wrong, failed to collect data!", "feedData" => array()); break;
 			}
 
@@ -86,7 +86,7 @@
 		public function updateData($post, $target){
 			switch($target){
 				case "system"  :
-					$fields = array("acc_owner", "acc_number", "acc_bank");
+					$fields = array("acc_owner", "acc_number", "acc_bank", "instagram", "twitter", "facebook");
 					$values = array();
 					foreach ($fields as $key) {
 						$value = (isset($post[$key]) && $post[$key] != "") ? $post[$key] : "";

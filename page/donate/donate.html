@@ -73,13 +73,15 @@
     <script src="../../assets/js/partial.js"></script>
     <script src="../../assets/js/public.js"></script>
     <script>
-        function openCity(cityName) {
-        var i;
-        var x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        document.getElementById(cityName).style.display = "block";
+        function openCity(elem, cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+          }
+          document.getElementById(cityName).style.display = "block";
+          $(".btn-tab").removeClass("active");
+          $(elem).addClass("active");
         }
 
         $(function(){
@@ -103,6 +105,7 @@
         var donate_group = (dumb.feedData != undefined) ? dumb.feedData : [];
         var donate_inner = "";
         var donate_navigator = "";
+        var state_ac = "active";
 
         for(var loop=0; loop<donate_group.length; loop++){
 
@@ -115,7 +118,8 @@
             '<center><button class="button-circle btn-equipment gillsans" type="button" onclick="location.href=\'../../' + donate_group[loop].link + '\'">DONASI</button></center>'+
           '</div>';
 
-          donate_navigator = donate_navigator + '<button class="tab-' + loop + '" onclick="openCity(\'tab-' + loop + '\')">' + donate_group[loop].title.toUpperCase() + '</button>';
+          donate_navigator = donate_navigator + '<button class="btn-tab ' + state_ac + ' tab-' + loop + '" onclick="openCity(this, \'tab-' + loop + '\')">' + donate_group[loop].title.toUpperCase() + '</button>';
+          state_ac = "";
         }
 
         $("#donate-content").html(donate_inner);

@@ -18,11 +18,11 @@
         <main class="parent">
 
     <!-- Main Tab-->
-            <div class="tab gillsans-15">
-                <button class="tab-equipment" onclick="location.href='../donate/donate_equipment.html'">EQUIPMENT</button>
+            <div id="donate-navigator" class="tab gillsans-15">
+                <!-- <button class="tab-equipment" onclick="location.href='../donate/donate_equipment.html'">EQUIPMENT</button>
                 <button class="tab-food" onclick="location.href='../donate/donate_food.html'">FOOD</button>
                 <button class="tab-medical" onclick="location.href='../donate/donate_medical.html'">MEDICAL</button>
-                <button class="tab-money" onclick="location.href='../donate/donate_money.html'">MONEY</button>
+                <button class="tab-money" onclick="location.href='../donate/donate_money.html'">MONEY</button> -->
             </div>
             <hr class="tab-hr">
     <!-- Main Content-->
@@ -33,7 +33,7 @@
                 </div>
                 <div class="clearfix"></div>
                 <section id="item-list">
-                  <div class="col-md-5 col-sm-5 bca-account img-center cart-position" ><img src="../../assets/img/gallery/petcargo1.jpg" class="img-cart"></div>
+                  <!-- <div class="col-md-5 col-sm-5 bca-account img-center cart-position" ><img src="../../assets/img/gallery/petcargo1.jpg" class="img-cart"></div>
                   <div class="col-md-7 col-sm-7 bca-account cart-position">
                       <div class="input-group " style="margin-top:30px;">
                           <p class="gillsans-content text-color-content article-content-cart">Jenis<span class="jenis-content">: Woodwork</span></p>
@@ -56,7 +56,7 @@
                       </div>
                   </div>
                   <div class="clearfix"></div>
-                  <hr>
+                  <hr> -->
                 </section>
                 <p class="gillsans subtotal">Subtotal (0 item) : Rp. 0</p>
                 <div class="clearfix"></div>
@@ -113,8 +113,23 @@
     <script src="../../assets/js/partial.js"></script>
     <script>
       $(function(){
+        donate_group();
         donate_();
       });
+
+      function donate_group(){
+        var dumb         = p_getData('operation', 'home_donate');
+        var donate_group = (dumb.feedData != undefined) ? dumb.feedData : [];
+        var donate_navigator = "";
+        var state_ac = "active";
+        console.log(donate_group);
+        for(var loop=0; loop<donate_group.length; loop++){
+          donate_navigator = donate_navigator + '<button class="btn-tab ' + state_ac + ' tab-' + loop + '" type="button"><a href="../../' + donate_group[loop].link + '">' + donate_group[loop].title.toUpperCase() + '</a></button>';
+          state_ac = "";
+        }
+
+        $("#donate-navigator").html(donate_navigator);
+      }
 
       function donate_(){
 
@@ -142,14 +157,17 @@
               picture = "../../assets/img/dog2.gif";
               if(item.picture != "" && item.picture != undefined) picture = "../../assets/product/" + item_cart[loop].product_type + "/" + item.picture;
 
+              if(item_cart[loop].product_type == "equipment") item.shipment = item_cart[loop].additional_info;
+              if(item_cart[loop].product_type == "medical") item.size = item_cart[loop].additional_info;
+
               item_container = item_container +
               '<div class="col-md-5 col-sm-5 bca-account img-center cart-position" ><img src="' + picture + '" class="img-cart"></div>' +
               '<div class="col-md-7 col-sm-7 bca-account cart-position">' +
                   '<div class="input-group " style="margin-top:30px;">' +
-                      '<p class="gillsans-content text-color-content article-content-cart">Jenis<span class="jenis-content">: ' + item.type + '</span></p>' +
-                      '<p class="gillsans-content text-color-content article-content-cart">Ukuran<span class="ukuran-content">: ' + item.size + '</span></p>' +
-                      '<p class="gillsans-content text-color-content article-content-cart">Detail<span class="detail-content">: ' + item.detail + '</span></p>' +
-                      '<p class="gillsans-content text-color-content article-content-cart">Jenis Pengiriman<span class="pengiriman-content">: ' + item.shipment + '</span></p>' +
+                      '<p class="gillsans-content text-color-content article-content-cart"><span class="cart-label">Jenis</span><span class="cart-text">: ' + item.type + '</span></p>' +
+                      '<p class="gillsans-content text-color-content article-content-cart"><span class="cart-label">Ukuran</span><span class="cart-text">: ' + item.size + '</span></p>' +
+                      '<p class="gillsans-content text-color-content article-content-cart"><span class="cart-label">Detail</span><span class="cart-text">: ' + item.detail + '</span></p>' +
+                      '<p class="gillsans-content text-color-content article-content-cart"><span class="cart-label">Jenis Pengiriman</span><span class="cart-text">: ' + item.shipment + '</span></p>' +
                       '<a href="#" delete-index="' + loop + '"><p class="gillsans-content text-color-content article-content-cart del-cart"><i>Hapus</i></p></a>' +
                   '</div>' +
               '</div>' +

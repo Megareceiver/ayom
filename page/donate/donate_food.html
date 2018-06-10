@@ -36,13 +36,15 @@
     <script src="../../assets/js/jquery-3.3.1.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script>
-        function openCity(cityName) {
+        function openCity(elem, cityName) {
           var i;
           var x = document.getElementsByClassName("city");
           for (i = 0; i < x.length; i++) {
               x[i].style.display = "none";
           }
           document.getElementById(cityName).style.display = "block";
+          $(".btn-tab").removeClass("active");
+          $(elem).addClass("active");
         }
     </script>
     <script src="../../assets/js/public.js"></script>
@@ -66,9 +68,11 @@
         var donate_container = "";
 
         var donate_list = [];
+        var state_ac = "active";
 
         for(var loop=0; loop<donate_type.length; loop++){
-          donate_navigator = donate_navigator + '<button class="tab-blog" onclick="openCity(\'donate-' + loop +'\')">' + donate_type[loop].caption + '</button>';
+          donate_navigator = donate_navigator + '<button class="tab-blog ' + state_ac + ' btn-tab" onclick="openCity(this, \'donate-' + loop +'\')">' + donate_type[loop].caption + '</button>';
+          state_ac = "";
 
           state = (loop > 0) ? 'display-none' : "";
           donate_container = donate_container +
@@ -76,7 +80,7 @@
               '<p class="gillsans-content text-color-content description-head" style="margin-bottom:50px;"></p>' +
               '<div class="col-md-7 col-sm-7"><img index="1" src="../../assets/system/' + system.food_viewer + '" class="img-fit-cover img-shop tab-donate item-viewer"></div>' +
               '<div class="col-md-5 col-sm-5" id="form-' + loop + '">' +
-                  '<p class="gillsans-15 tab-article">PLEASE SELECT :</p>' +
+                  '<p class="gillsans-15 tab-article">SILAHKAN MEMILIH :</p>' +
                   '<div class="input-group input-width">' +
                       '<select name="type" class="form-control input-default-form gillsans dummy-select" type="donate-' + loop + '" >' +
                         '<option value="">Pilih Jenis</option>' +
@@ -86,12 +90,13 @@
                       '<input type="text" name="size" class="form-control input-default-form gillsans" placeholder="Ukuran" disabled>' +
                   '</div>' +
                   '<div class="input-group input-width">' +
-                      '<textarea type="text" name="detail" class="form-control input-default-form gillsans" placeholder="Detail item : QTY needed, SKU, where to buy" rows="4" cols="37" style="resize:none;" disabled></textarea>' +
+                      // '<textarea type="text" name="detail" class="form-control input-default-form gillsans" placeholder="Detail item : QTY needed, SKU, where to buy" rows="4" cols="37" style="resize:none;" disabled></textarea>' +
+                      '<p name="detail" class="gillsans detail-box">Detail item : (Jumlah target, SKU, dan lainnya)</p>' +
                   '</div>' +
                   '<div class="input-group input-width">' +
                       '<input type="text" name="shipment" class="form-control input-default-form gillsans" placeholder="Jenis Pengiriman" disabled>' +
                   '</div>' +
-                  '<button type="button" cart-form="donate-' + loop + '" class="button-circle-form btn-equipment-addcart gillsans">SIMPAN KE KERANJANG</button>' +
+                  '<button type="button" cart-form="donate-' + loop + '" class="button-circle-form btn-equipment-addcart gillsans btn-add-to-cart">SIMPAN KE KERANJANG</button>' +
               '</div>' +
           '</div>';
 
@@ -127,12 +132,15 @@
 
             $('#' + type + ' input,' + '#form-' + loop + ' textarea').val('');
 
-            picture = "../../assets/img/dog2.gif";
+            picture = "../../assets/system/food_viewer.gif";
             if(item.picture != "" && item.picture != undefined) picture = "../../assets/product/foods/" + item.picture;
+
+            var detail = "Detail item : (Jumlah target, SKU, dan lainnya)";
+            if($(this).val() != "") detail = item.detail;
 
             $('#' + type + ' .item-viewer').attr('src', picture);
             $('#' + type + ' [name=size]').val(item.size);
-            $('#' + type + ' [name=detail]').val(item.detail);
+            $('#' + type + ' [name=detail]').html(detail);
             $('#' + type + ' [name=shipment]').val(item.shipment);
           });
         }
@@ -160,6 +168,13 @@
           $("#cart-bubble").addClass('active');
           $("#cart-bubble").html(leng);
       		$("#cart-text").attr('style', 'display:none');
+          $(".btn-add-to-cart").html("&#10003;");
+          $(".btn-add-to-cart").addClass("success");
+
+          setTimeout(function(){
+            $(".btn-add-to-cart").html("SIMPAN KE KERANJANG");
+            $(".btn-add-to-cart").removeClass("success");
+          }, 1000);
         }
       }
     </script>

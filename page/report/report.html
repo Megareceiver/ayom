@@ -24,11 +24,11 @@
             <div class="clearfix"></div>
 <!-- Main Tab-->
             <div class="tab gillsans-14 article-title-blog">
-                <button class="tab-blog" onclick="openCity('Donasi')">DONASI</button>
-                <button class="tab-blog" onclick="openCity('Rek-Koran')">REK. KORAN</button>
-                <button class="tab-blog" onclick="openCity('Ikhtisar-Keuangan')">IKHTISAR KEUANGAN</button>
-                <button class="tab-blog" onclick="openCity('Laporan-Tahunan')">LAPORAN TAHUNAN</button>
-                <button class="tab-blog" onclick="openCity('Kebijakan-Prosedur')">KEBIJAKAN & PROSEDUR</button>
+                <button class="tab-blog btn-tab active" onclick="openCity(this, 'Donasi')">DONASI</button>
+                <button class="tab-blog btn-tab" onclick="openCity(this, 'Rek-Koran')">REK. KORAN</button>
+                <button class="tab-blog btn-tab" onclick="openCity(this, 'Ikhtisar-Keuangan')">IKHTISAR KEUANGAN</button>
+                <button class="tab-blog btn-tab" onclick="openCity(this, 'Laporan-Tahunan')">LAPORAN TAHUNAN</button>
+                <button class="tab-blog btn-tab" onclick="openCity(this, 'Kebijakan-Prosedur')">KEBIJAKAN & PROSEDUR</button>
             </div>
             <hr class="tab-hr">
 <!-- Main Content-->
@@ -314,13 +314,15 @@
     <script src="../../assets/js/jquery-3.3.1.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script>
-        function openCity(cityName) {
-        var i;
-        var x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        document.getElementById(cityName).style.display = "block";
+        function openCity(elem, cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+          }
+          document.getElementById(cityName).style.display = "block";
+          $(".btn-tab").removeClass("active");
+          $(elem).addClass("active");
         }
     </script>
     <script src="../../assets/js/public.js"></script>
