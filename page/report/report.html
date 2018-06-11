@@ -565,11 +565,11 @@
         $("#pl_title_6").html(data.title_6);
         $("#pl_title_7").html(data.title_7);
 
-        $("#pl_picture_1").attr('src', '../../assets/report/profit_and_loss/' + data.picture_1);
-        $("#pl_picture_2").attr('src', '../../assets/report/profit_and_loss/' + data.picture_2);
-        $("#pl_picture_3").attr('src', '../../assets/report/profit_and_loss/' + data.picture_3);
-        $("#pl_picture_4").attr('src', '../../assets/report/profit_and_loss/' + data.picture_4);
-        $("#pl_picture_5").attr('src', '../../assets/report/profit_and_loss/' + data.picture_5);
+        if(data.title_1 != "") $("#pl_picture_1").attr('src', '../../assets/report/profit_and_loss/' + data.picture_1); else $("#pl_title_1").remove();
+        if(data.title_2 != "") $("#pl_picture_2").attr('src', '../../assets/report/profit_and_loss/' + data.picture_2); else $("#pl_title_2").parent().parent().remove();
+        if(data.title_3 != "") $("#pl_picture_3").attr('src', '../../assets/report/profit_and_loss/' + data.picture_3); else $("#pl_title_3").parent().parent().remove();
+        if(data.title_4 != "") $("#pl_picture_4").attr('src', '../../assets/report/profit_and_loss/' + data.picture_4); else $("#pl_title_4").parent().parent().remove();
+        if(data.title_5 != "") $("#pl_picture_5").attr('src', '../../assets/report/profit_and_loss/' + data.picture_5); else $("#pl_title_5").parent().parent().remove();
 
         $("#pl_box_6 span").html(data.caption_1);
         $("#pl_box_8 span").html(data.caption_2);
@@ -578,12 +578,12 @@
         $("#pl_box_14 span").html(data.caption_5);
         $("#pl_box_16 span").html(data.caption_6);
 
-        $("#pl_box_7").html(data.value_1);
-        $("#pl_box_9").html(data.value_2);
-        $("#pl_box_11").html(data.value_3);
-        $("#pl_box_13").html(data.value_4);
-        $("#pl_box_15").html(data.value_5);
-        $("#pl_box_17").html(data.value_6);
+        if(data.caption_1 != "") $("#pl_box_7").html(data.value_1); else $("#pl_box_7").parent().parent().remove();
+        if(data.caption_2 != "") $("#pl_box_9").html(data.value_2); else $("#pl_box_8").parent().parent().remove();
+        if(data.caption_3 != "") $("#pl_box_11").html(data.value_3); else $("#pl_box_10").parent().parent().remove();
+        if(data.caption_4 != "") $("#pl_box_13").html(data.value_4); else $("#pl_box_12").parent().parent().remove();
+        if(data.caption_5 != "") $("#pl_box_15").html(data.value_5); else $("#pl_box_14").parent().parent().remove();
+        if(data.caption_6 != "") $("#pl_box_17").html(data.value_6); else $("#pl_box_16").parent().parent().remove();
 
         if(data.picture_2 == "") $("#pl_picture_2").remove();
         if(data.picture_3 == "") $("#pl_picture_3").remove();

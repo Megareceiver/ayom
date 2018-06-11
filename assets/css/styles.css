@@ -523,7 +523,7 @@ header.parent .cart{
     background-color: #83786b;
   }
   .btn-equipment-addcart.success{
-    background-color: #5cb85c;
+    background-color: orange;
     font-size: 40px;
   }
   .btn-equipment{
