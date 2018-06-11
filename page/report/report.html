@@ -630,19 +630,22 @@
 
         if(data.title_cash_flow == ""){
           $("#arus-kas-box").remove();
-          $("#cash-flow-box").remove();
         }else{
           $("#cash_flow_title").html(data.title_cash_flow);
+          $("#cash_flow_caption_1").html(data.caption_1);
+          $("#cash_flow_caption_2").html(data.caption_2);
+          $("#cash_flow_caption_3").html(data.caption_3);
+
+          $("#cash_flow_value_1").html(data.value_1);
+          $("#cash_flow_value_2").html(data.value_2);
+          $("#cash_flow_value_3").html(data.value_3);
+        }
+        if(data.title_trend == ""){
+          $("#cash-flow-box").remove();
+        }else{
+
           $("#cash_flow_title_trend").html(data.title_trend);
         }
-
-        $("#cash_flow_caption_1").html(data.caption_1);
-        $("#cash_flow_caption_2").html(data.caption_2);
-        $("#cash_flow_caption_3").html(data.caption_3);
-
-        $("#cash_flow_value_1").html(data.value_1);
-        $("#cash_flow_value_2").html(data.value_2);
-        $("#cash_flow_value_3").html(data.value_3);
 
         if(data.picture != "") {
           $("#cash_flow_picture").attr('src', '../../assets/report/cash_flow/' + data.picture);
