@@ -83,7 +83,7 @@
                   '<p class="gillsans-15 tab-article">SILAHKAN MEMILIH :</p>' +
                   '<div class="input-group input-width">' +
                       '<select name="type" class="form-control input-default-form gillsans dummy-select" type="donate-' + loop + '" >' +
-                        '<option value="">Pilih Jenis</option>' +
+                        // '<option value="">Pilih Jenis</option>' +
                       '</select>' +
                   '</div>' +
                   '<div class="input-group input-width">' +
@@ -118,6 +118,8 @@
         $(".description-head").html(donate_group.description);
 
         donate_item(donate_list, donate_type.length);
+
+        $("[name=type]").trigger("change");
       }
 
       function donate_item(donate_list, len){
