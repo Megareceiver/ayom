@@ -16,14 +16,18 @@
 <!-- END Header -->
 <!-- Main -->
         <main class="parent">
-            <div class="blog-article article-blog article-title">
-                <p class="gillsans-22 tab-article" id="title-head"></p>
+            <div id="donate-navigator-2" class="tab gillsans-15">
+
             </div>
+            <hr class="tab-hr" style="margin-bottom: 15px;">
+            <!-- <div class="blog-article article-blog article-title">
+                <p class="gillsans-22 tab-article" id="title-head"></p>
+            </div> -->
             <div class="clearfix"></div>
     <!-- Main Tab-->
             <p class="visible-xs">.. Geser menu ke kiri.</p>
             <div class="tab gillsans-15 article-title-blog" id="donate-navigator"></div>
-            <hr class="tab-hr">
+            <!-- <hr class="tab-hr"> -->
     <!-- Main Content-->
             <section id="donate-container"></section>
 
@@ -44,7 +48,7 @@
               x[i].style.display = "none";
           }
           document.getElementById(cityName).style.display = "block";
-          $(".btn-tab").removeClass("active");
+          $(".btn-detail").removeClass("active");
           $(elem).addClass("active");
         }
     </script>
@@ -52,8 +56,24 @@
     <script src="../../assets/js/partial.js"></script>
     <script>
       $(function(){
+        donate_group();
         donate_();
       });
+
+      function donate_group(){
+        var dumb         = p_getData('operation', 'home_donate');
+        var donate_group = (dumb.feedData != undefined) ? dumb.feedData : [];
+        var donate_navigator = "";
+        var state_ac = "";
+
+        for(var loop=0; loop<donate_group.length; loop++){
+          if(loop==1) state_ac = "active";
+          donate_navigator = donate_navigator + '<button class="btn-tab btn-main ' + state_ac + ' tab-' + loop + '" type="button"><a href="../../' + donate_group[loop].link + '">' + donate_group[loop].title.toUpperCase() + '</a></button>';
+          state_ac = "";
+        }
+
+        $("#donate-navigator-2").html(donate_navigator);
+      }
 
       function donate_(){
         var system = p_getData('support', 'systemFetch');
@@ -72,7 +92,7 @@
         var state_ac = "active";
 
         for(var loop=0; loop<donate_type.length; loop++){
-          donate_navigator = donate_navigator + '<button class="tab-blog ' + state_ac + ' btn-tab" onclick="openCity(this, \'donate-' + loop +'\')">' + donate_type[loop].caption + '</button>';
+          donate_navigator = donate_navigator + '<button class="tab-blog btn-detail ' + state_ac + ' btn-tab" onclick="openCity(this, \'donate-' + loop +'\')">' + donate_type[loop].caption + '</button>';
           state_ac = "";
 
           state = (loop > 0) ? 'display-none' : "";
