@@ -2361,3 +2361,11 @@ header.parent .cart{
     float: left !important;
   }
 }
+
+/*custom Rp.*/
+.rp { position: absolute;}
+.rp-nomina{
+  display:inline-block;
+  width:-webkit-fill-available;
+  text-align:right;
+}
