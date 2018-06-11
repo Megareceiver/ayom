@@ -158,6 +158,7 @@
               if(item.picture != "" && item.picture != undefined) picture = "../../assets/product/" + item_cart[loop].product_type + "/" + item.picture;
 
               if(item_cart[loop].product_type == "equipment") item.shipment = item_cart[loop].additional_info;
+              if(item_cart[loop].product_type == "foods") item.shipment = item_cart[loop].additional_info;
               if(item_cart[loop].product_type == "medical") item.size = item_cart[loop].additional_info;
 
               item_container = item_container +
