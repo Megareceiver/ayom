@@ -135,7 +135,7 @@ function footer(){
 
 	$("footer.parent").html(html);
 
-	p_formHandler('syncrom', 'addData', '', 'yes');
+	p_formHandler('syncrom', 'addData', 'email', 'yes');
 
 }
 

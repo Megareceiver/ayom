@@ -112,8 +112,11 @@ function p_formHandler(formId, type, back, custom = "no"){
 			success: function(result){
 				console.log(result);
 				if(result.feedStatus == "success"){
-					if(back != "") r_callBack(back, custom, result.feedData);
-					else { alert('The process has been successful'); }
+					if(back != "" && back != "email") r_callBack(back, custom, result.feedData);
+					else {
+						if(back != "email") alert('The process has been successful');
+						else alert('Email berhasil didaftarkan!');
+					}
 				}
 			},
 			complete: function(xhr,status) { },
