@@ -21,6 +21,18 @@ $(function(){
 	});
 });
 
+<!--Start of Tawk.to Script-->
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5b3cf8134af8e57442dc5657/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+<!--End of Tawk.to Script-->
+
 function r_setCookie(cname,cvalue,exdays="1") {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -67,7 +79,7 @@ function header(){
 			 '<div class="collapse navbar-collapse" id="syncard-nav">' +
 					'<div id="navbar-custom">' +
 						'<ul class="nav navbar-nav main-menu gillsans">' +
-				        '<li class="hidden-sm hidden-xs"><a href="' + base_url + '"><img id="topnav-logo" src="' + base_url + '/assets/system/' + system.logo + '" /></a></li>' +
+				        '<li class="hidden-sm hidden-xs"><a href="' + base_url + '" style="padding-top: 14px"><img id="topnav-logo" src="' + base_url + '/assets/system/' + system.logo + '" /></a></li>' +
 				        '<li><a id="home-route" href="' + base_url + '/page/donate/donate.html"><span>DONASI</span></a></li>' +
 				        '<li><a id="shop-route" href="' + base_url + '/page/blog/blog.html"><span>BLOG</span></a></li>' +
 				        // '<li><a id="story-route" href="' + base_url + '/page/shop/shop.html"><span>SHOP</span></a></li>' +
