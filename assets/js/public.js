@@ -256,7 +256,7 @@ function currencyFormatChanger(target){
 
 function currencyFormatChanger_static(target){
 	var n = parseInt(target.replace(/\D/g,''),10);
-	return n.toLocaleString();
+	return n.toLocaleString().replace(/,/g, '.');
 }
 
 function normalFormatChanger(target){
